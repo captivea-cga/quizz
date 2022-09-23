@@ -32,7 +32,7 @@
         'views/player_views.xml',
         'views/theme_views.xml',
         'views/level_views.xml',
-        # 'views/quizz_views.xml',
+        'views/quizz_views.xml',
         'views/swapi_menuitems.xml',
         'wizard/specie_wizard_view.xml',
         'wizard/planet_wizard_view.xml',
@@ -40,7 +40,7 @@
         'wizard/people_wizard_view.xml',
         'wizard/starship_wizard_view.xml',
         'wizard/vehicle_wizard_view.xml',
-        # 'wizard/quizz_wizard_view.xml',
+        'wizard/quizz_wizard_view.xml',
         'demo/swapi_demo.xml'
             ],
     'demo':[
