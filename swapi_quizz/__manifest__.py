@@ -15,7 +15,7 @@
         - Planets
     """,
     'author': 'PBN + AGI + CGA',
-    'website': 'https://www.odoo.com',
+    'website': 'https://www.captivea.com',
     'category':'Star Wars',
     'version':'1.1.0',
     'depends': ['base'],
