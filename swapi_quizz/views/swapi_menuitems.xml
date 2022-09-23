@@ -126,7 +126,7 @@
                   />
         
         <menuitem id="menu_swapi_sub" name="STAR WARS" parent="menu_swapi" sequence="2"/>
-        <menuitem id="menu_quizz_sub" name="QUIZZ" parent="menu_swapi" sequence="3"/>
+        <menuitem id="menu_quizz_sub" name="QUIZZ" parent="menu_swapi" sequence="3" action="quizz_list_action"/>
         <menuitem id="menu_swapi_species" name="Species" parent="menu_swapi_sub" sequence="4" action="specie_list_action"/>
         <menuitem id="menu_swapi_planets" name="Planets" parent="menu_swapi_sub" sequence="5" action="planet_list_action"/>
         <menuitem id="menu_swapi_films" name="Films" parent="menu_swapi_sub" sequence="6" action="film_list_action"/>
