@@ -11,13 +11,13 @@ class Quizz(models.Model):
     _description = 'Quizz Info'
     
     name = fields.Char(string="Name")
-    player_id = fields.Many2One(comodel_name='swapi.player',
+    player_id = fields.Many2one(comodel_name='swapi.player',
                                        string='Player',
                                        required=True)
-    theme_id = fields.Many2One(comodel_name='swapi.theme',
+    theme_id = fields.Many2one(comodel_name='swapi.theme',
                                        string='Theme',
                                        required=True)
-    level_id = fields.Many2One(comodel_name='swapi.level',
+    level_id = fields.Many2one(comodel_name='swapi.level',
                                        string='Level',
                                        required=True)
     
