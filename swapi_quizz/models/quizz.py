@@ -20,7 +20,7 @@ class Quizz(models.Model):
     level_id = fields.Many2one(comodel_name='swapi.level',
                                        string='Level',
                                        required=True)
-    
+    question = fields.Text(string="Question")
     
     @api.onchange('player_id','theme_id','level_id')
     def _onchange_name(self):
