@@ -27,7 +27,7 @@ class Quizz(models.Model):
         self.name = str(self.player_id.name).upper() + " / " + str(self.theme_id.name) + " * " + str(self.level_id.name)
     
     def start_quizz(self):
-        raise UserError(_('GOOOO!!!!!!!'))
+        raise UserError('GOOOO!!!!!!!')
         if self.level_id == "Padawan" :
              if self.theme_id =="Species":
                 random_number = random.randint()
