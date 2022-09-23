@@ -27,12 +27,12 @@ class Quizz(models.Model):
         self.name = str(self.player_id.name).upper() + " / " + str(self.theme_id.name) + " * " + str(self.level_id.name)
     
     def start_quizz(self):
-        raise UserError('GOOOO!!!!!!!')
+        
         if self.level_id == "Padawan" :
              if self.theme_id =="Species":
                 random_number = random.randint()
                 specie_random = self.env['swapi.specie'].search([('id',"=",random_number)])
-                
+                raise UserError(random_number)
                 # if specie_random:
                 #     self.question = specie_random.name     
                 # else :
