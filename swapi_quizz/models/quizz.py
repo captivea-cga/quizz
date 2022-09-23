@@ -29,6 +29,8 @@ class Quizz(models.Model):
         if self.level_id.name == "Padawan" :
             if self.theme_id.name =="Species":
                 self.states = "Dans quel(s) film(s) peut-on voir cette espèce ?"
+            else:
+                self.states = "Il n'y a pas encore de question pour ce thème/niveau"
     def start_quizz(self):
         
         if self.level_id.name == "Padawan" :
