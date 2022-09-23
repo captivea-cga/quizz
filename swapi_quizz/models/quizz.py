@@ -26,7 +26,9 @@ class Quizz(models.Model):
     @api.onchange('player_id','theme_id','level_id')
     def _onchange_name(self):
         self.name = str(self.player_id.name).upper() + " / " + str(self.theme_id.name) + " * " + str(self.level_id.name)
-        self.states = "Dans quel(s) film(s) peut-on voir cette espèce ?"
+        if self.level_id.name == "Padawan" :
+            if self.theme_id.name =="Species":
+                self.states = "Dans quel(s) film(s) peut-on voir cette espèce ?"
     def start_quizz(self):
         
         if self.level_id.name == "Padawan" :
