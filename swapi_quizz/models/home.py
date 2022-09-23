@@ -364,8 +364,8 @@ class Home(models.Model):
                                 #     vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
                                 #     new_people['vehicle_ids'] = [(4,vehicle_url.id)]
 
-                                planet = self.env['swapi.planet'].search([('url','=',specie['homeworld'])])
-                                new_people['planet_ids'] = planet
+                                # planet = self.env['swapi.planet'].search([('url','=',specie['homeworld'])])
+                                # new_people['planet_ids'] = planet
                             # endif
                         # endfor
 
