@@ -13,10 +13,10 @@
                                 <field name="player_id"/>
                             </group>
                             <group>
-                                <field name="theme_id"/>
+                                <field name="theme_id" widget='selection'/>
                             </group>
                             <group>
-                                <field name="level_id"/>
+                                <field name="level_id" widget='selection'/>
                             </group>
                         </group>
                     </sheet>
