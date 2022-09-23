@@ -29,7 +29,7 @@
             <field name="model">swapi.level</field>
             <field name="arch" type="xml">
             
-                <tree string="Level List" create=False>
+                <tree string="Level List" >
 
                     <field name="name"/>
                     <field name="limit_down"/>
