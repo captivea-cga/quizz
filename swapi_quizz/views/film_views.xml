@@ -16,7 +16,7 @@
                             </group>
                         </group>
                                                 
-                        <notebook>
+                        <!-- <notebook>
                             <page string="Introduction">
                                 <div class="container text-center">
                                     <div class="row">
@@ -65,7 +65,7 @@
                                     </group>
                                 </group>
                             </page>
-                        </notebook>
+                        </notebook> -->
                     </sheet>
                 </form>
             </field>
