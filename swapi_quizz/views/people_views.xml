@@ -20,7 +20,7 @@
                                 <field name="gender" />
                             </group>
                         </group>
-                        <notebook>
+                        <!-- <notebook>
                             <page string="Physical Description">
                                     <group>
                                         <group> 
@@ -61,7 +61,7 @@
                                     </group>
                                 </group>
                             </page>
-                        </notebook>
+                        </notebook> -->
                     </sheet>
                 </form>
             </field>

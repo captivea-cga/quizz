@@ -21,11 +21,11 @@ class People(models.Model):
     url = fields.Char(string="ID (URL)")
     created = fields.Char(string="Creation")
     edited = fields.Char(string="Edition")
-    planet_ids = fields.Many2many(comodel_name='swapi.planet',string='Planets',readonly=True)
-    specie_ids = fields.Many2many(comodel_name='swapi.specie',string='Species',readonly=True)
-    film_ids = fields.Many2many(comodel_name='swapi.film',string='Films',readonly=True)
-    starship_ids = fields.Many2many(comodel_name='swapi.starship',string='Starships',readonly=True)
-    vehicle_ids = fields.Many2many(comodel_name='swapi.vehicle',string='Vehicles',readonly=True)
+    # planet_ids = fields.Many2many(comodel_name='swapi.planet',string='Planets',readonly=True)
+    # specie_ids = fields.Many2many(comodel_name='swapi.specie',string='Species',readonly=True)
+    # film_ids = fields.Many2many(comodel_name='swapi.film',string='Films',readonly=True)
+    # starship_ids = fields.Many2many(comodel_name='swapi.starship',string='Starships',readonly=True)
+    # vehicle_ids = fields.Many2many(comodel_name='swapi.vehicle',string='Vehicles',readonly=True)
     homeworld = fields.Char()
     
     
