@@ -164,9 +164,9 @@ class Home(models.Model):
                                 'created':result['created'],
                                 'edited':result['edited']
                             })
-                            for resident in residents:
-                                resident_url = self.env['swapi.people'].search([('url','=',resident)])
-                                new_planet['people_ids'] = [(4,resident_url.id)]
+                            # for resident in residents:
+                            #     resident_url = self.env['swapi.people'].search([('url','=',resident)])
+                            #     new_planet['people_ids'] = [(4,resident_url.id)]
                             # for film in films:
                             #     film_url = self.env['swapi.film'].search([('url','=',film)])
                             #     new_planet['film_ids'] = [(4,film_url.id)]
