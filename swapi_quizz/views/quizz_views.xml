@@ -19,7 +19,12 @@
                                 <field name="level_id" widget='selection'/>
                             </group>
                         </group>
-                        <field name="question"/>
+                        <div>
+                            <field name="states"/>
+                        </div>
+                        <div>
+                            <field name="proposition"/>
+                        </div>
                         <footer>
                             <button name="start_quizz" type="object"
                                     string="Start Quizz" class="oe_highlight"/>
