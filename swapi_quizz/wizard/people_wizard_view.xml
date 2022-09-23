@@ -1,0 +1,32 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="swapi_people_wizard_form_view">
+            <field name="name">swapi.people.wizard.form</field>
+            <field name="model">swapi.people.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update people from SWAPI">
+                    <p>This button allows updating people from SWAPI.
+                            If you don't have any people in your base, you must do this update.
+                            Otherwise, this update is to be done when a new film is released.
+                    </p>
+                    <footer>
+                        <button name="update_people" type="object"
+                                string="Update People" class="oe_highlight"/>
+                        
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="launch_people_wizard"
+                model="ir.actions.act_window">
+            <field name="name">Update people</field>
+            <field name="res_model">swapi.people.wizard</field>
+            <field name="binding_model_id" ref="swapi_quizz.model_swapi_people"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+       
+   </data>
+</odoo>

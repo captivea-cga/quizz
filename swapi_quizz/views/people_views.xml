@@ -1,0 +1,90 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="people_view_form">
+            <field name="name">swapi.people.form</field>
+            <field name="model">swapi.people</field>
+            <field name="arch" type="xml">
+                <form string="Specie Form">
+<!--                     <button name="update_specie"
+                    type="object"
+                    string="Update"
+                    class="oe_highlight"/> -->
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <group>
+                                <field name="birth_year" />
+                            </group>
+                            <group>
+                                <field name="gender" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Physical Description">
+                                    <group>
+                                        <group> 
+                                                <field name="height"/>
+                                                <field name="mass"/>
+                                        </group>
+                                        <group>    
+                                                <field name="eye_color"/>
+                                                <field name="hair_color"/>
+                                                <field name="skin_color"/>
+                                        </group>
+                                    </group>
+                                        
+                            </page>
+                            <page string="Homeworld">
+                                <field name="planet_ids"/>
+                            </page>
+                            <page string="Films">
+                                <field name="film_ids"/>
+                            </page>
+                            <page string="Species">
+                                <field name="specie_ids"/>
+                            </page>
+                            <page string="Starships">
+                                <field name="starship_ids"/>
+                            </page>
+                            <page string="Vehicles">
+                                <field name="vehicle_ids"/>
+                            </page>
+                            <page string="Technical">
+                                <group>    
+                                    <group>
+                                       <field name="url"/> 
+                                    </group>
+                                    <group>
+                                        <field name="created"/>
+                                        <field name="edited"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="people_view_list">
+            <field name="name">swapi.people.list</field>
+            <field name="model">swapi.people</field>
+            <field name="arch" type="xml">
+            
+                <tree string="People List">
+                    
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="height"/>
+                    <field name="mass"/>
+                </tree>
+            </field>
+        </record>    
+        <record id="launch_update_people"
+                model="ir.actions.act_window">
+            <field name="name">Update People</field>
+            <field name="res_model">swapi.people</field>
+        </record>
+    </data>
+</odoo>

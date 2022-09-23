@@ -1,0 +1,130 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="specie_list_action">
+            <field name="name">Species</field>
+            <field name="res_model">swapi.specie</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add specie (upgrade Species in action menu)
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="planet_list_action">
+            <field name="name">Planets</field>
+            <field name="res_model">swapi.planet</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add planet (upgrade planets in action menu)
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="film_list_action">
+            <field name="name">Films</field>
+            <field name="res_model">swapi.film</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add film (upgrade films in action menu)
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="people_list_action">
+            <field name="name">People</field>
+            <field name="res_model">swapi.people</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add people (upgrade people in action menu)
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="starship_list_action">
+            <field name="name">Starship</field>
+            <field name="res_model">swapi.starship</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add starship (upgrade starships in action menu)
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="vehicle_list_action">
+            <field name="name">Vehicle</field>
+            <field name="res_model">swapi.vehicle</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add vehicle (upgrade vehicles in action menu)
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="home_kanban_action">
+            <field name="name">Home</field>
+            <field name="res_model">swapi.home</field>
+            <field name="view_mode">kanban</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    HOME
+                </p>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="player_list_action">
+            <field name="name">Player</field>
+            <field name="res_model">swapi.player</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add your first player
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="theme_list_action">
+            <field name="name">Theme</field>
+            <field name="res_model">swapi.theme</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a theme
+                </p>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="level_list_action">
+            <field name="name">Level</field>
+            <field name="res_model">swapi.level</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a level
+                </p>
+            </field>
+        </record>
+
+        <menuitem name="Swapi Quizz"
+                  id="menu_swapi"
+                  sequence="1"
+                  action = "home_kanban_action"
+                  />
+        
+        <menuitem id="menu_swapi_sub" name="STAR WARS" parent="menu_swapi" sequence="2"/>
+        <menuitem id="menu_quizz_sub" name="QUIZZ" parent="menu_swapi" sequence="3"/>
+        <menuitem id="menu_swapi_species" name="Species" parent="menu_swapi_sub" sequence="4" action="specie_list_action"/>
+        <menuitem id="menu_swapi_planets" name="Planets" parent="menu_swapi_sub" sequence="5" action="planet_list_action"/>
+        <menuitem id="menu_swapi_films" name="Films" parent="menu_swapi_sub" sequence="6" action="film_list_action"/>
+        <menuitem id="menu_swapi_people" name="People" parent="menu_swapi_sub" sequence="7" action="people_list_action"/>
+        <menuitem id="menu_swapi_starship" name="Starships" parent="menu_swapi_sub" sequence="8" action="starship_list_action"/>
+        <menuitem id="menu_swapi_vehicle" name="Vehicles" parent="menu_swapi_sub" sequence="9" action="vehicle_list_action"/>
+        <menuitem id="menu_quizz_player" name="Players" parent="menu_quizz_sub" sequence="10" action="player_list_action"/>
+        <menuitem id="menu_quizz_theme" name="Themes" parent="menu_quizz_sub" sequence="11" action="theme_list_action"/>
+        <menuitem id="menu_quizz_level" name="Levels" parent="menu_quizz_sub" sequence="12" action="level_list_action"/>
+    </data>
+</odoo>

@@ -1,0 +1,69 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+
+<odoo>
+    <data noupdate="1">
+        
+        <record model="swapi.home" id="home_specie">
+            <field name="name">SPECIES</field>
+        </record>
+        <record model="swapi.home" id="home_planet">
+            <field name="name">PLANETS</field>
+        </record>
+        <record model="swapi.home" id="home_film">
+            <field name="name">FILMS</field>
+        </record>
+        <record model="swapi.home" id="home_people">
+            <field name="name">PEOPLE</field>
+        </record>
+        <record model="swapi.home" id="home_starship">
+            <field name="name">STARSHIPS</field>
+        </record>
+        <record model="swapi.home" id="home_vehicle">
+            <field name="name">VEHICLES</field>
+        </record>
+        <record model="swapi.home" id="home_update">
+            <field name="name">UPDATE ALL DATAS</field>
+        </record>
+
+        <record model="swapi.theme" id="theme_species">
+            <field name="name">Species</field>
+        </record>
+        <record model="swapi.theme" id="theme_planets">
+            <field name="name">Planets</field>
+        </record>
+        <record model="swapi.theme" id="theme_films">
+            <field name="name">Films</field>
+        </record>
+        <record model="swapi.theme" id="theme_people">
+            <field name="name">People</field>
+        </record>
+        <record model="swapi.theme" id="theme_starships">
+            <field name="name">Starships</field>
+        </record>
+        <record model="swapi.theme" id="theme_vehicles">
+            <field name="name">Vehicles</field>
+        </record>
+
+        <record model="swapi.level" id="level_padawan">
+            <field name="name">Padawan</field>
+            <field name="limit_down">0.0</field>
+            <field name="limit_up">39.9</field>
+        </record>
+        <record model="swapi.level" id="level_jedi">
+            <field name="name">Jedi</field>
+            <field name="limit_down">40.0</field>
+            <field name="limit_up">74.9</field>
+        </record>
+        <record model="swapi.level" id="level_master">
+            <field name="name">Master</field>
+            <field name="limit_down">75.0</field>
+            <field name="limit_up">98.9</field>
+        </record>
+         <record model="swapi.level" id="level_legend">
+            <field name="name">Legend</field>
+            <field name="limit_down">99.0</field>
+            <field name="limit_up">100.0</field>
+        </record>
+    </data>
+
+</odoo>

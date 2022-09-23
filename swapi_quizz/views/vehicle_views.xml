@@ -1,0 +1,81 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="vehicle_view_form">
+            <field name="name">swapi.vehicle.form</field>
+            <field name="model">swapi.vehicle</field>
+            <field name="arch" type="xml">
+                <form string="Vehicle Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <h1><field name="name"/></h1>
+                            </group>
+                        </group>
+                                                
+                        <notebook>
+                            <page string="Description">
+                                <group>
+                                    <field name="model"/>
+                                    <field name="vehicle_class"/>
+                                    <field name="manufacturer"/>
+                                    <field name="cost_in_credits"/>
+                                </group>
+                            </page>
+                            <page string="Capacity">
+                                <group>
+                                    <group>
+                                        <field name="length"/>
+                                        <field name="crew"/>
+                                        <field name="passengers"/>
+                                    </group>
+                                    <group>
+                                        <field name="max_atmosphering_speed"/>
+                                        <field name="cargo_capacity"/>
+                                        <field name="consumables"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Films">
+                                <field name="film_ids"/>
+                            </page>
+                            <page string="Pilots">
+                                <field name="people_ids"/>
+                            </page>
+                            <page string="Technical">
+                                <group>    
+                                    <group>
+                                       <field name="url"/> 
+                                    </group>
+                                    <group>
+                                        <field name="created"/>
+                                        <field name="edited"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="vehicle_view_list">
+            <field name="name">swapi.vehicle.list</field>
+            <field name="model">swapi.vehicle</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Vehicle List">
+                    
+                    <field name="name"/>
+                    <field name="cost_in_credits"/>
+                    <field name="max_atmosphering_speed"/>
+                </tree>
+            </field>
+        </record>    
+        <record id="launch_update_vehicle"
+                model="ir.actions.act_window">
+            <field name="name">Update Vehicles</field>
+            <field name="res_model">swapi.vehicle</field>
+        </record>
+    </data>
+</odoo>

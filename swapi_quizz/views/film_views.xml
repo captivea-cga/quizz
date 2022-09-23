@@ -1,0 +1,93 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="film_view_form">
+            <field name="name">swapi.film.form</field>
+            <field name="model">swapi.film</field>
+            <field name="arch" type="xml">
+                <form string="Film Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <h1><field name="title"/></h1>
+                            </group>
+                            <group>
+                                <h1>Episode <field name="episode_id"/></h1>
+                            </group>
+                        </group>
+                                                
+                        <notebook>
+                            <page string="Introduction">
+                                <div class="container text-center">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <field name="opening_crawl"/>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </page>
+                            <page string="Film Crew">
+                                <group>
+                                    <group>
+                                        <field name="director"/>
+                                        <field name="producer"/>
+                                    </group>
+                                    <group>
+                                        <field name="release_date"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Species">
+                                <field name="specie_ids"/>
+                            </page>
+                            <page string="Starships">
+                                <field name="starship_ids"/>
+                            </page>
+                            <page string="Vehicles">
+                                <field name="vehicle_ids"/>
+                            </page>
+                            <page string="Characters">
+                                <field name="people_ids"/>
+                            </page>
+                            <page string="Planets">
+                                <field name="planet_ids"/>
+                            </page>
+                            <page string="Technical">
+                                <group>    
+                                    <group>
+                                       <field name="url"/> 
+                                    </group>
+                                    <group>
+                                        <field name="created"/>
+                                        <field name="edited"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="film_view_list">
+            <field name="name">swapi.film.list</field>
+            <field name="model">swapi.film</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Film List">
+                    
+                    <field name="title"/>
+                    <field name="episode_id"/>
+                    <field name="release_date"/>
+                </tree>
+            </field>
+        </record>    
+        <record id="launch_update_film"
+                model="ir.actions.act_window">
+            <field name="name">Update Films</field>
+            <field name="res_model">swapi.film</field>
+        </record>
+    </data>
+</odoo>

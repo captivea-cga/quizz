@@ -1,0 +1,72 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="planet_view_form">
+            <field name="name">swapi.planet.form</field>
+            <field name="model">swapi.planet</field>
+            <field name="arch" type="xml">
+                <form string="Planet Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <notebook>
+                            <page string="Description">
+                                <group>
+                                    
+                                    <group>
+                                        <field name="diameter"/>
+                                        <field name="rotation_period"/>
+                                        <field name="gravity"/>
+                                        <field name="orbital_period"/>
+                                        <field name="population"/>
+                                    </group>
+                                    <group>
+                                        <field name="terrain"/>
+                                        <field name="climate"/>
+                                        <field name="surface_water"/>
+                                    </group>
+                                </group>
+                                
+                            </page>
+                            <page string="Residents">
+                                <field name="people_ids"/>
+                            </page>
+                            <page string="Films">
+                                <field name="film_ids"/>
+                            </page>
+                            <page string="Technical">
+                                <group>    
+                                    <group>
+                                       <field name="url"/> 
+                                    </group>
+                                    <group>
+                                        <field name="created"/>
+                                        <field name="edited"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="planet_view_list">
+            <field name="name">swapi.planet.list</field>
+            <field name="model">swapi.planet</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Planet List">
+                    
+                    <field name="name"/>
+                    <field name="diameter"/>
+                    <field name="population"/>
+                </tree>
+            </field>
+        </record>    
+        <record id="launch_update_planet"
+                model="ir.actions.act_window">
+            <field name="name">Update Planets</field>
+            <field name="res_model">swapi.planet</field>
+        </record>
+    </data>
+</odoo>

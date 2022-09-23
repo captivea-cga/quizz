@@ -1,0 +1,109 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="player_view_form">
+            <field name="name">swapi.player.form</field>
+            <field name="model">swapi.player</field>
+            <field name="arch" type="xml">
+                <form string="player Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <span>
+                                    <h1>PSEUDO</h1>
+                                </span>
+                                <span>
+                                    <h1><field name="pseudo"/></h1>
+                                </span>    
+                                 
+                            </group>
+                            <!-- <group>
+                                <h1>Episode <field name="level_id"/></h1>
+                            </group> -->
+                        </group>
+                                                
+                        <notebook>
+                            <page string="Score">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Theme</th>
+                                            <th scope="col">Score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Species</th>
+                                            <td>
+                                                <field name="score_species"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Planets</th>
+                                            <td>
+                                                <field name="score_planets"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Films</th>
+                                            <td>
+                                                <field name="score_films"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">People</th>
+                                            <td>
+                                                <field name="score_people"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Starships</th>
+                                            <td>
+                                                <field name="score_starships"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Vehicles</th>
+                                            <td>
+                                                <field name="score_vehicles"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                       <tr>
+                                            <th scope="col">Score TOTAL</th>
+                                            <th scope="col">
+                                                <field name="score_total"/>
+                                            </th>
+                                        </tr> 
+                                    </tfoot>
+                                </table>
+                                
+                                
+                                
+                                
+                            </page>
+                            <!-- <page string="Quizz">
+                                <field name="quizz_ids"/>
+                            </page> -->
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="player_view_list">
+            <field name="name">swapi.player.list</field>
+            <field name="model">swapi.player</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Film List">
+                    
+                    <field name="pseudo"/>
+                    <!-- <field name="level_id"/> -->
+                    <field name="score_total"/>
+                </tree>
+            </field>
+        </record>    
+    </data>
+</odoo>

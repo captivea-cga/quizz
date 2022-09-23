@@ -1,0 +1,32 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="swapi_specie_wizard_form_view">
+            <field name="name">swapi.specie.wizard.form</field>
+            <field name="model">swapi.specie.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update species from SWAPI">
+                    <p>This button allows updating species from SWAPI.
+                            If you don't have any species in your base, you must do this update.
+                            Otherwise, this update is to be done when a new film is released.
+                    </p>
+                    <footer>
+                        <button name="update_species" type="object"
+                                string="Update Species" class="oe_highlight"/>
+                        
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="launch_specie_wizard"
+                model="ir.actions.act_window">
+            <field name="name">Update specie</field>
+            <field name="res_model">swapi.specie.wizard</field>
+            <field name="binding_model_id" ref="swapi_quizz.model_swapi_specie"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+       
+   </data>
+</odoo>

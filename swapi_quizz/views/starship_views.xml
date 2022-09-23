@@ -1,0 +1,87 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="starship_view_form">
+            <field name="name">swapi.starship.form</field>
+            <field name="model">swapi.starship</field>
+            <field name="arch" type="xml">
+                <form string="Starship Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <h1><field name="name"/></h1>
+                            </group>
+                        </group>
+                                                
+                        <notebook>
+                            <page string="Description">
+                                <group>
+                                    <group>
+                                        <field name="model"/>
+                                        <field name="starship_class"/>
+                                    </group>
+                                    <group>
+                                        <field name="manufacturer"/>
+                                        <field name="cost_in_credits"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Capacity">
+                                <group>
+                                    <group>
+                                        <field name="length"/>
+                                        <field name="crew"/>
+                                        <field name="passengers"/>
+                                    </group>
+                                    <group>
+                                        <field name="max_atmosphering_speed"/>
+                                        <field name="hyperdrive_rating"/>
+                                        <field name="mglt"/>
+                                        <field name="cargo_capacity"/>
+                                        <field name="consumables"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Films">
+                                <field name="film_ids"/>
+                            </page>
+                            <page string="Pilots">
+                                <field name="people_ids"/>
+                            </page>
+                            <page string="Technical">
+                                <group>    
+                                    <group>
+                                       <field name="url"/> 
+                                    </group>
+                                    <group>
+                                        <field name="created"/>
+                                        <field name="edited"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="starship_view_list">
+            <field name="name">swapi.starship.list</field>
+            <field name="model">swapi.starship</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Starship List">
+                    
+                    <field name="name"/>
+                    <field name="cost_in_credits"/>
+                    <field name="max_atmosphering_speed"/>
+                </tree>
+            </field>
+        </record>    
+        <record id="launch_update_starship"
+                model="ir.actions.act_window">
+            <field name="name">Update Starships</field>
+            <field name="res_model">swapi.starship</field>
+        </record>
+    </data>
+</odoo>

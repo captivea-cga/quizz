@@ -1,0 +1,32 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="swapi_planet_wizard_form_view">
+            <field name="name">swapi.planet.wizard.form</field>
+            <field name="model">swapi.planet.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update planets from SWAPI">
+                    <p>This button allows updating planets from SWAPI.
+                            If you don't have any planets in your base, you must do this update.
+                            Otherwise, this update is to be done when a new film is released.
+                    </p>
+                    <footer>
+                        <button name="update_planets" type="object"
+                                string="Update Planets" class="oe_highlight"/>
+                        
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="launch_planet_wizard"
+                model="ir.actions.act_window">
+            <field name="name">Update planet</field>
+            <field name="res_model">swapi.planet.wizard</field>
+            <field name="binding_model_id" ref="swapi_quizz.model_swapi_planet"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+       
+   </data>
+</odoo>

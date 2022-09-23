@@ -1,0 +1,31 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="theme_view_form">
+            <field name="name">swapi.theme.form</field>
+            <field name="model">swapi.theme</field>
+            <field name="arch" type="xml">
+                <form string="Theme Form">
+                    <sheet>
+                        <group>
+                            <h1><field name="name"/></h1>
+                        </group>
+                                                
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="theme_view_list">
+            <field name="name">swapi.theme.list</field>
+            <field name="model">swapi.theme</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Theme List">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>    
+    </data>
+</odoo>

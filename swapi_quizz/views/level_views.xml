@@ -1,0 +1,41 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="level_view_form">
+            <field name="name">swapi.level.form</field>
+            <field name="model">swapi.level</field>
+            <field name="arch" type="xml">
+                <form string="Level Form">
+                    <sheet>
+                        <group>
+
+                            <group>
+                                <h1><field name="name" /></h1>
+                            </group>
+                            <group>
+                                <field name="limit_down" />
+                                <field name="limit_up" />
+                            </group>  
+                        </group>
+                                                
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="level_view_list">
+            <field name="name">swapi.level.list</field>
+            <field name="model">swapi.level</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Level List">
+
+                    <field name="name"/>
+                    <field name="limit_down"/>
+                    <field name="limit_up"/>
+                </tree>
+            </field>
+        </record>    
+    </data>
+</odoo>

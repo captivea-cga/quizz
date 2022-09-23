@@ -1,0 +1,32 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="swapi_starship_wizard_form_view">
+            <field name="name">swapi.starship.wizard.form</field>
+            <field name="model">swapi.starship.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update starships from SWAPI">
+                    <p>This button allows updating starships from SWAPI.
+                            If you don't have any starships in your base, you must do this update.
+                            Otherwise, this update is to be done when a new film is released.
+                    </p>
+                    <footer>
+                        <button name="update_starships" type="object"
+                                string="Update Starships" class="oe_highlight"/>
+                        
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="launch_starship_wizard"
+                model="ir.actions.act_window">
+            <field name="name">Update starship</field>
+            <field name="res_model">swapi.starship.wizard</field>
+            <field name="binding_model_id" ref="swapi_quizz.model_swapi_starship"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+       
+   </data>
+</odoo>

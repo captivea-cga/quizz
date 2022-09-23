@@ -1,0 +1,28 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+specie_admin,specie admin,model_swapi_specie,group_swapi_admin,1,1,1,1
+specie_read_all,specie read all,model_swapi_specie,,1,0,0,0
+specie_wizard_admin,specie wizard admin,model_swapi_specie_wizard,group_swapi_admin_wizard,1,1,1,1
+planet_admin,planet admin,model_swapi_planet,group_swapi_admin,1,1,1,1
+planet_read_all,planet read all,model_swapi_planet,,1,0,0,0
+planet_wizard_admin,planet wizard admin,model_swapi_planet_wizard,group_swapi_admin_wizard,1,1,1,1
+film_admin,film admin,model_swapi_film,group_swapi_admin,1,1,1,1
+film_read_all,film read all,model_swapi_film,,1,0,0,0
+film_wizard_admin,film wizard admin,model_swapi_film_wizard,group_swapi_admin_wizard,1,1,1,1
+people_admin,people admin,model_swapi_people,group_swapi_admin,1,1,1,1
+people_read_all,people read all,model_swapi_people,,1,0,0,0
+people_wizard_admin,people wizard admin,model_swapi_people_wizard,group_swapi_admin_wizard,1,1,1,1
+starship_admin,starship admin,model_swapi_starship,group_swapi_admin,1,1,1,1
+starship_read_all,starship read all,model_swapi_starship,,1,0,0,0
+starship_wizard_admin,starship wizard admin,model_swapi_starship_wizard,group_swapi_admin_wizard,1,1,1,1
+vehicle_admin,vehicle admin,model_swapi_vehicle,group_swapi_admin,1,1,1,1
+vehicle_read_all,vehicle read all,model_swapi_vehicle,,1,0,0,0
+vehicle_wizard_admin,vehicle wizard admin,model_swapi_vehicle_wizard,group_swapi_admin_wizard,1,1,1,1
+home_admin,home admin,model_swapi_home,group_swapi_admin,1,1,1,1
+home_read_all,home read all,model_swapi_home,,1,0,0,0
+home_wizard_admin,home wizard admin,model_swapi_vehicle_wizard,group_swapi_admin_wizard,1,1,1,1
+player_admin,player admin,model_swapi_player,group_swapi_admin,1,1,1,1
+player_read_all,player read all,model_swapi_player,,1,0,0,0
+theme_admin,theme admin,model_swapi_theme,group_swapi_admin,1,1,1,1
+theme_read_all,theme read all,model_swapi_theme,,1,0,0,0
+level_admin,level admin,model_swapi_level,group_swapi_admin,1,1,1,1
+level_read_all,level read all,model_swapi_level,,1,0,0,0
