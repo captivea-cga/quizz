@@ -30,7 +30,7 @@ class Quizz(models.Model):
         
         if self.level_id.name == "Padawan" :
              if self.theme_id.name =="Species":
-                specie_count = self.env['swapi.specie'].search_count([('id',"=",True)])
+                specie_count = self.env['swapi.specie'].search_count([()])
                 random_number = random.randint(1,specie_count)
                 specie_random = self.env['swapi.specie'].search([('id',"=",random_number)])
                 raise UserError(str(random_number))
