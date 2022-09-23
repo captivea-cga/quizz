@@ -99,7 +99,7 @@
             
                 <tree string="Film List">
                     
-                    <field name="pseudo"/>
+                    <field name="name"/>
                     <!-- <field name="level_id"/> -->
                     <field name="score_total"/>
                 </tree>
