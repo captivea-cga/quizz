@@ -24,8 +24,8 @@ class Vehicle(models.Model):
     url = fields.Char(string="ID (URL)")
     created = fields.Char(string="Creation")
     edited = fields.Char(string="Edition")
-    # people_ids = fields.Many2many(comodel_name='swapi.people',string='Pilots',readonly=True)
-    # film_ids = fields.Many2many(comodel_name='swapi.film',string='Films',readonly=True)
+    people_ids = fields.Many2many(comodel_name='swapi.people',string='Pilots',readonly=True)
+    film_ids = fields.Many2many(comodel_name='swapi.film',string='Films',readonly=True)
     
     
     

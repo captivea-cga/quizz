@@ -8,7 +8,7 @@
                 <form string="Planet Form">
                     <sheet>
                         <h1><field name="name"/></h1>
-                        <!-- <notebook>
+                        <notebook>
                             <page string="Description">
                                 <group>
                                     
@@ -44,7 +44,7 @@
                                     </group>
                                 </group>
                             </page>
-                        </notebook> -->
+                        </notebook>
                     </sheet>
                 </form>
             </field>

@@ -22,9 +22,9 @@ class Specie(models.Model):
     url = fields.Char(string="ID (URL)")
     created = fields.Char(string="Creation")
     edited = fields.Char(string="Edition")
-    # planet_ids = fields.Many2many(comodel_name='swapi.planet',string='Planets',readonly=True)
-    # people_ids = fields.Many2many(comodel_name='swapi.people',string='People',readonly=True)
-    # film_ids = fields.Many2many(comodel_name='swapi.film',string='Films',readonly=True)
+    planet_ids = fields.Many2many(comodel_name='swapi.planet',string='Planets',readonly=True)
+    people_ids = fields.Many2many(comodel_name='swapi.people',string='People',readonly=True)
+    film_ids = fields.Many2many(comodel_name='swapi.film',string='Films',readonly=True)
     homeworld = fields.Char()
     
     
