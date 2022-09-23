@@ -109,7 +109,7 @@
             </field>
         </record>
         <record model="ir.actions.act_window" id="quizz_list_action">
-            <field name="name">Quizz_</field>
+            <field name="name">Quizz</field>
             <field name="res_model">swapi.quizz</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
