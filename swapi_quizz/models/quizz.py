@@ -33,7 +33,7 @@ class Quizz(models.Model):
                 specie_count = self.env['swapi.specie'].search_count([])
                 random_number = random.randint(1,specie_count)
                 specie_random = self.env['swapi.specie'].search([('id',"=",random_number)])
-                raise UserError(str(random_number))
+                raise UserError(str(specie_random.name))
                 # if specie_random:
                 #     self.question = specie_random.name     
                 # else :
