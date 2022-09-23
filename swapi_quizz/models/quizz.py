@@ -22,5 +22,7 @@ class Quizz(models.Model):
                                        required=True)
     
     
-    
+    @api.onchange('player_id','theme_id','level_id')
+    def _onchange_name(self):
+        self.name = self.player_id.name.upper() + " / " + self.theme_id.name + " * " + self.level_id.name
     
