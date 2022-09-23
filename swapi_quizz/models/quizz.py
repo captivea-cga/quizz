@@ -31,5 +31,8 @@ class Quizz(models.Model):
              if self.theme_id =="Species":
                 random_number = random.randint()
                 specie_random = self.env['swapi.specie'].search([('id',"=",random_number)])
-                if specie_random:
-                    self.question = specie_random.name     
+                raise UserError(_(str(random_number)))
+                # if specie_random:
+                #     self.question = specie_random.name     
+                # else :
+                     
