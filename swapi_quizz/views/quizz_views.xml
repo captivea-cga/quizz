@@ -19,7 +19,14 @@
                                 <field name="level_id" widget='selection'/>
                             </group>
                         </group>
+
                     </sheet>
+                    <footer>
+                        <button name="start_quizz" type="object"
+                                string="Start Quizz" class="oe_highlight"/>
+                        
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
                 </form>
             </field>
         </record>
@@ -29,8 +36,7 @@
             <field name="model">swapi.quizz</field>
             <field name="arch" type="xml">
             
-                <tree string="Quizz List">
-                    
+                <tree string="Quizz List" >
                     <field name="name"/>
                     <field name="player_id"/>
                     <field name="theme_id"/>

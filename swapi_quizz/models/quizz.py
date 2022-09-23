@@ -3,7 +3,7 @@
 
 from odoo import models, fields, api
 from odoo.exceptions import UserError, ValidationError
-
+import random
 
 class Quizz(models.Model):
     
@@ -22,16 +22,14 @@ class Quizz(models.Model):
                                        required=True)
     
     
-    @api.model
-    def create(self, vals):
-        quizz=super().create(vals)
-        quizz.name = ""
-        
-        return quizz
-    
-        
-    
     @api.onchange('player_id','theme_id','level_id')
     def _onchange_name(self):
         self.name = str(self.player_id.name).upper() + " / " + str(self.theme_id.name) + " * " + str(self.level_id.name)
     
+    def start_quizz(self):
+        if self.level_id == "Padawan" :
+             if self.theme_id =="Species":
+                random_number = random.randint()
+                specie_random = self.env['swapi.specie'].search([('id',"=",random_number)])
+                if specie_random:
+                    self.question = specie_random.name     
