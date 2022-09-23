@@ -13,7 +13,7 @@
                             </group>
                         </group>
                                                 
-                        <notebook>
+                        <!-- <notebook>
                             <page string="Description">
                                 <group>
                                     <group>
@@ -59,7 +59,7 @@
                                     </group>
                                 </group>
                             </page>
-                        </notebook>
+                        </notebook> -->
                     </sheet>
                 </form>
             </field>
