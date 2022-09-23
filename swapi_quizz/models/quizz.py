@@ -22,6 +22,15 @@ class Quizz(models.Model):
                                        required=True)
     
     
+    @api.model
+    def create(self, vals):
+        quizz=super().create(vals)
+        quizz.name = ""
+        
+        return quizz
+    
+        
+    
     @api.onchange('player_id','theme_id','level_id')
     def _onchange_name(self):
         self.name = str(self.player_id.name).upper() + " / " + str(self.theme_id.name) + " * " + str(self.level_id.name)
