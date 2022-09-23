@@ -10,3 +10,4 @@ from . import home
 from . import player
 from . import theme
 from . import level
+from . import quizz
