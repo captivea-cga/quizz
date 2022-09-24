@@ -67,8 +67,8 @@
 
         <record model="swapi.quizz" id="quizz_species_padawan">
             <field name="name">Species / Padawan</field>
-            <field name="theme_id.name">Species</field>
-            <field name="level_id.name">Padawan</field>
+            <field name="theme_id">Species</field>
+            <field name="level_id">Padawan</field>
         </record>
     </data>
 
