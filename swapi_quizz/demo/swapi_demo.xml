@@ -65,11 +65,7 @@
             <field name="limit_up">100.0</field>
         </record>
 
-        <record model="swapi.quizz" id="quizz_species_padawan">
-            <field name="name">Species / Padawan</field>
-            <field name="theme_id" eval="[(6,0,[1])]">Species</field>
-            <field name="level_id" eval="[(6,0,[1])]">Padawan</field>
-        </record>
+        
     </data>
 
 </odoo>
