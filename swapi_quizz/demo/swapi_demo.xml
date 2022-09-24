@@ -64,6 +64,12 @@
             <field name="limit_down">99.0</field>
             <field name="limit_up">100.0</field>
         </record>
+
+        <record model="swapi.quizz" id="quizz_species_padawan">
+            <field name="name">Species / Padawan</field>
+            <field name="theme_id.name">Species</field>
+            <field name="level_id.name">Padawan</field>
+        </record>
     </data>
 
 </odoo>

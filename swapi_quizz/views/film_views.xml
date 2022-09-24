@@ -76,7 +76,7 @@
             <field name="model">swapi.film</field>
             <field name="arch" type="xml">
             
-                <tree string="Film List">
+                <tree string="Film List" create="false">
                     
                     <field name="title"/>
                     <field name="episode_id"/>

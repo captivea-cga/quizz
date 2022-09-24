@@ -23,14 +23,14 @@ class Quizz(models.Model):
     states = fields.Text(string="Question")
     proposition = fields.Char(string="Proposition")
     
-    @api.onchange('player_id','theme_id','level_id')
-    def _onchange_name(self):
-        self.name = str(self.player_id.name).upper() + " / " + str(self.theme_id.name) + " * " + str(self.level_id.name)
-        if self.level_id.name == "Padawan" :
-            if self.theme_id.name =="Species":
-                self.states = "Dans quel(s) film(s) peut-on voir cette espèce ?"
-            else:
-                self.states = "Il n'y a pas encore de question pour ce thème/niveau"
+    # @api.onchange('player_id','theme_id','level_id')
+    # def _onchange_name(self):
+    #     self.name = str(self.player_id.name).upper() + " / " + str(self.theme_id.name) + " * " + str(self.level_id.name)
+    #     if self.level_id.name == "Padawan" :
+    #         if self.theme_id.name =="Species":
+    #             self.states = "Dans quel(s) film(s) peut-on voir cette espèce ?"
+    #         else:
+    #             self.states = "Il n'y a pas encore de question pour ce thème/niveau"
     def start_quizz(self):
         
         if self.level_id.name == "Padawan" :
