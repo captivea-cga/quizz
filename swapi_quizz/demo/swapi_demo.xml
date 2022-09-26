@@ -59,12 +59,17 @@
             <field name="limit_down">75.0</field>
             <field name="limit_up">98.9</field>
         </record>
-         <record model="swapi.level" id="level_legend">
+        <record model="swapi.level" id="level_legend">
             <field name="name">Legend</field>
             <field name="limit_down">99.0</field>
             <field name="limit_up">100.0</field>
         </record>
 
+        <record model="swapi.quizz" id="species_padawan">
+            <field name="name">Species / Padawan</field>
+            <field name="theme_id.id">1</field>
+            <field name="level_id.id">1</field>
+        </record>
         
     </data>
 
