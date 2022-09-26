@@ -66,12 +66,9 @@
         </record>
 
         <record model="swapi.quizz" id="species_padawan">
-            <field name="name">Species / Padawan</field>
-            <field name="theme_id" eval="[Command.create({
-                'name': 'Species',
-                }),
-                Command.link(ref('model.xml_id')),
-                ]"/>
+            <field name="name">Species / Padawan </field>
+            <field name="theme_id" ref="swapi.theme"/>
+            
             
         </record>
         

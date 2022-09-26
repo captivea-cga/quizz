@@ -41,4 +41,6 @@ class Quizz(models.Model):
                 self.proposition = str(specie_random.name)
                 # raise UserError(str(specie_random.name))
                 
+    
+                
                      
