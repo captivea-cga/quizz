@@ -67,8 +67,12 @@
 
         <record model="swapi.quizz" id="species_padawan">
             <field name="name">Species / Padawan</field>
-            <field name="theme_id" search="[('id','=','1')]"/>
-            <field name="level_id" search="[('id','=','1')]"/>
+            <field name="theme_id" eval="[Command.create({
+                'name': 'Species',
+                }),
+                Commend.link(ref('model.xml_id')),
+                ]"/>
+            
         </record>
         
     </data>
