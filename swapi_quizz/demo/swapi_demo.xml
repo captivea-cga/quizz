@@ -70,7 +70,7 @@
             <field name="theme_id" eval="[Command.create({
                 'name': 'Species',
                 }),
-                Commend.link(ref('model.xml_id')),
+                Command.link(ref('model.xml_id')),
                 ]"/>
             
         </record>
