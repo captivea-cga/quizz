@@ -5,7 +5,7 @@
             <field name="name">swapi.quizz.kanban</field>
             <field name="model">swapi.quizz</field>
             <field name="arch" type="xml">
-                <kanban string="QUIZZ" create="false">
+                <kanban string="QUIZZ" create="false" default_group_by="theme_id">
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_card oe_kanban_global_click">
