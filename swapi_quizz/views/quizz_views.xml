@@ -47,7 +47,7 @@
                         <button name="create_all_quizz" string="Create All Quizz" type="object" class="btn-primary"/>
                     </header> -->
                     <field name="name"/>
-                    <field name="player_id"/>
+                    <!-- <field name="player_id"/> -->
                     <field name="theme_id"/>
                     <field name="level_id"/>
                 </tree>
