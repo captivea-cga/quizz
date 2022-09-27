@@ -88,6 +88,30 @@
             <field name="theme_id" ref="theme_species"/>
             <field name="level_id" ref="level_legend"/>
         </record>
+
+        <record model="swapi.quizz" id="planets_padawan">
+            <field name="name">Planets / Padawan </field>
+            <field name="theme_id" ref="theme_planets"/>
+            <field name="level_id" ref="level_padawan"/>
+        </record>
+
+        <record model="swapi.quizz" id="planets_jedi">
+            <field name="name">Planets / Jedi </field>
+            <field name="theme_id" ref="theme_planets"/>
+            <field name="level_id" ref="level_jedi"/>
+        </record>
+
+        <record model="swapi.quizz" id="planets_master">
+            <field name="name">Planets / Master </field>
+            <field name="theme_id" ref="theme_planets"/>
+            <field name="level_id" ref="level_master"/>
+        </record>
+
+        <record model="swapi.quizz" id="planets_legend">
+            <field name="name">Planets / Legend </field>
+            <field name="theme_id" ref="theme_planets"/>
+            <field name="level_id" ref="level_legend"/>
+        </record>
         
     </data>
 
