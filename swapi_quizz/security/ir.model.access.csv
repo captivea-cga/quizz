@@ -22,7 +22,10 @@ home_read_all,home read all,model_swapi_home,,1,0,0,0
 home_wizard_admin,home wizard admin,model_swapi_vehicle_wizard,group_swapi_admin_wizard,1,1,1,1
 player_admin,player admin,model_swapi_player,group_swapi_admin,1,1,1,1
 player_read_all,player read all,model_swapi_player,,1,0,0,0
-theme_admin,theme admin,model_swapi_theme,group_swapi_admin,1,1,1,1
+theme_admin,theme admin,model_swapi_theme,group_quizz_admin,1,1,1,1
 theme_read_all,theme read all,model_swapi_theme,,1,0,0,0
-level_admin,level admin,model_swapi_level,group_swapi_admin,1,1,1,1
+level_admin,level admin,model_swapi_level,group_quizz_admin,1,1,1,1
 level_read_all,level read all,model_swapi_level,,1,0,0,0
+quizz_admin,quizz admin,model_swapi_quizz,group_swapi_admin,1,1,1,1
+quizz_read_all,quizz read all,model_swapi_quizz,,1,0,0,0
+quizz_wizard_admin,quizz wizard admin,model_swapi_quizz_wizard,group_swapi_admin_wizard,1,1,1,1

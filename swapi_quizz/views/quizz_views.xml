@@ -1,0 +1,55 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="quizz_view_form">
+            <field name="name">swapi.quizz.form</field>
+            <field name="model">swapi.quizz</field>
+            <field name="arch" type="xml">
+                <form string="Quizz Form">
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <group>
+                            <!-- <group>
+                                <field name="player_id" widget='selection'/>
+                            </group> -->
+                            <group>
+                                <field name="theme_id" widget='selection'/>
+                            </group>
+                            <group>
+                                <field name="level_id" widget='selection'/>
+                            </group>
+                        </group>
+                        <div>
+                            <field name="states"/>
+                        </div>
+                        <div>
+                            <field name="proposition"/>
+                        </div>
+                        <footer>
+                            <button name="start_quizz" type="object"
+                                    string="Start Quizz" class="oe_highlight"/>
+                            
+                            <button special="cancel" string="Cancel"/>
+                        </footer>
+                    </sheet>
+                    
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="quizz_view_list">
+            <field name="name">swapi.quizz.list</field>
+            <field name="model">swapi.quizz</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Quizz List" >
+                    <field name="name"/>
+                    <field name="player_id"/>
+                    <field name="theme_id"/>
+                    <field name="level_id"/>
+                </tree>
+            </field>
+        </record>    
+        
+    </data>
+</odoo>

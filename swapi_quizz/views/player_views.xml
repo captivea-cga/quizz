@@ -13,7 +13,7 @@
                                     <h1>PSEUDO</h1>
                                 </span>
                                 <span>
-                                    <h1><field name="pseudo"/></h1>
+                                    <h1><field name="name"/></h1>
                                 </span>    
                                  
                             </group>
@@ -99,7 +99,7 @@
             
                 <tree string="Film List">
                     
-                    <field name="pseudo"/>
+                    <field name="name"/>
                     <!-- <field name="level_id"/> -->
                     <field name="score_total"/>
                 </tree>

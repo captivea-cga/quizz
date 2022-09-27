@@ -22,7 +22,7 @@
             <field name="model">swapi.theme</field>
             <field name="arch" type="xml">
             
-                <tree string="Theme List">
+                <tree string="Theme List" >
                     <field name="name"/>
                 </tree>
             </field>

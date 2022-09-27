@@ -11,7 +11,7 @@ class Player(models.Model):
     _description = 'Player Info'
     
     
-    pseudo = fields.Char(string="Pseudo")
+    name = fields.Char(string="Pseudo")
     score_total = fields.Float(string="Score STAR WARS")
     score_species = fields.Float(string="Score Species")
     score_planets = fields.Float(string="Score Planets")

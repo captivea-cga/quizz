@@ -108,12 +108,18 @@
                 </p>
             </field>
         </record>
+        <record model="ir.actions.act_window" id="quizz_list_action">
+            <field name="name">Quizz</field>
+            <field name="res_model">swapi.quizz</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a quizz
+                </p>
+            </field>
+        </record>
 
-        <menuitem name="Swapi Quizz"
-                  id="menu_swapi"
-                  sequence="1"
-                  action = "home_kanban_action"
-                  />
+        <menuitem name="Swapi Quizz" id="menu_swapi" sequence="1" action = "home_kanban_action"/>
         
         <menuitem id="menu_swapi_sub" name="STAR WARS" parent="menu_swapi" sequence="2"/>
         <menuitem id="menu_quizz_sub" name="QUIZZ" parent="menu_swapi" sequence="3"/>
@@ -124,7 +130,8 @@
         <menuitem id="menu_swapi_starship" name="Starships" parent="menu_swapi_sub" sequence="8" action="starship_list_action"/>
         <menuitem id="menu_swapi_vehicle" name="Vehicles" parent="menu_swapi_sub" sequence="9" action="vehicle_list_action"/>
         <menuitem id="menu_quizz_player" name="Players" parent="menu_quizz_sub" sequence="10" action="player_list_action"/>
-        <menuitem id="menu_quizz_theme" name="Themes" parent="menu_quizz_sub" sequence="11" action="theme_list_action"/>
-        <menuitem id="menu_quizz_level" name="Levels" parent="menu_quizz_sub" sequence="12" action="level_list_action"/>
+        <menuitem id="menu_quizz_quizz" name="Quizz" parent="menu_quizz_sub" sequence="11" action="quizz_list_action"/>
+        <menuitem id="menu_quizz_theme" name="Themes" parent="menu_quizz_sub" sequence="12" action="theme_list_action"/>
+        <menuitem id="menu_quizz_level" name="Levels" parent="menu_quizz_sub" sequence="13" action="level_list_action"/>
     </data>
 </odoo>

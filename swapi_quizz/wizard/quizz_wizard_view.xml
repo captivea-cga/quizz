@@ -19,7 +19,7 @@
         </record>
         <record id="launch_quizz_wizard"
                 model="ir.actions.act_window">
-            <field name="name">Quizz</field>
+            <field name="name">Quizz_wizard</field>
             <field name="res_model">swapi.quizz.wizard</field>
             <field name="binding_model_id" ref="swapi_quizz.model_swapi_quizz"/>
             <field name="view_mode">form</field>
