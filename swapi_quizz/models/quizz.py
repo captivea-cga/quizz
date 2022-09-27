@@ -42,5 +42,6 @@ class Quizz(models.Model):
                 # raise UserError(str(specie_random.name))
                 
     # Faire une fonction pour créer les quizz (tous) et faire un boutton dans la vue liste : Create All Quizz
-                
+    def create_all_quizz(self):
+        raise UserError("All Quizz")           
                      
