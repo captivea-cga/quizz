@@ -41,6 +41,6 @@ class Quizz(models.Model):
                 self.proposition = str(specie_random.name)
                 # raise UserError(str(specie_random.name))
                 
-    
+    # Faire une fonction pour créer les quizz (tous) et faire un boutton dans la vue liste : Create All Quizz
                 
                      
