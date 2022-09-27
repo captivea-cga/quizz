@@ -33,7 +33,6 @@
         'views/theme_views.xml',
         'views/level_views.xml',
         'views/quizz_views.xml',
-        'views/quizz_views_template.xml',
         'views/swapi_menuitems.xml',
         'wizard/specie_wizard_view.xml',
         'wizard/planet_wizard_view.xml',
