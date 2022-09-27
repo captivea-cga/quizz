@@ -1,0 +1,11 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<templates id="template_quizz" xml:space="preserve">
+    <t t-extend="ListView.buttons">
+        <t t-jquery=".o_list_buttons" t-operation="append">
+            <t t-if="widget.modelName" == 'swapi_quizz'/>
+                <button name="create_all_quizz" type="object"
+                        string="Create All Quizz" class="oe_highlight"/>
+            </t>
+        </t>
+    </t>
+</templates>   
