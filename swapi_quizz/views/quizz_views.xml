@@ -1,6 +1,30 @@
 <!-- <?xml version="1.0" encoding="utf-8"?> -->
 <odoo>
     <data>
+        <record model="ir.ui.view" id="quizz_view_kanban">
+            <field name="name">swapi.quizz.kanban</field>
+            <field name="model">swapi.quizz</field>
+            <field name="arch" type="xml">
+                <kanban string="QUIZZ" create="false">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_card_content">
+                                    <field name="name"/>
+                                    <field name="theme_id"/>
+                                    <field name="level_id"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record> 
+        
+        
+        
+        
+        
         <record model="ir.ui.view" id="quizz_view_form">
             <field name="name">swapi.quizz.form</field>
             <field name="model">swapi.quizz</field>
@@ -58,25 +82,7 @@
 
 
 
-        <record model="ir.ui.view" id="quizz_view_kanban">
-            <field name="name">swapi.quizz.kanban</field>
-            <field name="model">swapi.quizz</field>
-            <field name="arch" type="xml">
-                <kanban string="QUIZZ" create="false">
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
-                                <div class="o_kanban_card_content">
-                                    <field name="name"/>
-                                    <field name="theme_id"/>
-                                    <field name="level_id"/>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record> 
+        
 
 
 
