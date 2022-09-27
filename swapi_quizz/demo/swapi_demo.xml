@@ -113,6 +113,103 @@
             <field name="level_id" ref="level_legend"/>
         </record>
         
+        <record model="swapi.quizz" id="films_padawan">
+            <field name="name">Films / Padawan </field>
+            <field name="theme_id" ref="theme_films"/>
+            <field name="level_id" ref="level_padawan"/>
+        </record>
+
+        <record model="swapi.quizz" id="films_jedi">
+            <field name="name">Films / Jedi </field>
+            <field name="theme_id" ref="theme_films"/>
+            <field name="level_id" ref="level_jedi"/>
+        </record>
+
+        <record model="swapi.quizz" id="films_master">
+            <field name="name">Films / Master </field>
+            <field name="theme_id" ref="theme_films"/>
+            <field name="level_id" ref="level_master"/>
+        </record>
+
+        <record model="swapi.quizz" id="films_legend">
+            <field name="name">Films / Legend </field>
+            <field name="theme_id" ref="theme_films"/>
+            <field name="level_id" ref="level_legend"/>
+        </record>
+
+        <record model="swapi.quizz" id="people_padawan">
+            <field name="name">People / Padawan </field>
+            <field name="theme_id" ref="theme_people"/>
+            <field name="level_id" ref="level_padawan"/>
+        </record>
+
+        <record model="swapi.quizz" id="people_jedi">
+            <field name="name">People / Jedi </field>
+            <field name="theme_id" ref="theme_people"/>
+            <field name="level_id" ref="level_jedi"/>
+        </record>
+
+        <record model="swapi.quizz" id="people_master">
+            <field name="name">People / Master </field>
+            <field name="theme_id" ref="theme_people"/>
+            <field name="level_id" ref="level_master"/>
+        </record>
+films
+        <record model="swapi.quizz" id="people_legend">
+            <field name="name">People / Legend </field>
+            <field name="theme_id" ref="theme_people"/>
+            <field name="level_id" ref="level_legend"/>
+        </record>
+
+        <record model="swapi.quizz" id="starships_padawan">
+            <field name="name">Starships / Padawan </field>
+            <field name="theme_id" ref="theme_starships"/>
+            <field name="level_id" ref="level_padawan"/>
+        </record>
+
+        <record model="swapi.quizz" id="starships_jedi">
+            <field name="name">Starships / Jedi </field>
+            <field name="theme_id" ref="theme_starships"/>
+            <field name="level_id" ref="level_jedi"/>
+        </record>
+
+        <record model="swapi.quizz" id="starships_master">
+            <field name="name">Starships / Master </field>
+            <field name="theme_id" ref="theme_starships"/>
+            <field name="level_id" ref="level_master"/>
+        </record>
+
+        <record model="swapi.quizz" id="starships_legend">
+            <field name="name">Starships / Legend </field>
+            <field name="theme_id" ref="theme_starships"/>
+            <field name="level_id" ref="level_legend"/>
+        </record>
+
+         <record model="swapi.quizz" id="vehicles_padawan">
+            <field name="name">Vehicles / Padawan </field>
+            <field name="theme_id" ref="theme_vehicles"/>
+            <field name="level_id" ref="level_padawan"/>
+        </record>
+
+        <record model="swapi.quizz" id="vehicles_jedi">
+            <field name="name">Vehicles / Jedi </field>
+            <field name="theme_id" ref="theme_vehicles"/>
+            <field name="level_id" ref="level_jedi"/>
+        </record>
+
+        <record model="swapi.quizz" id="vehicles_master">
+            <field name="name">Vehicles / Master </field>
+            <field name="theme_id" ref="theme_vehicles"/>
+            <field name="level_id" ref="level_master"/>
+        </record>
+
+        <record model="swapi.quizz" id="vehicles_legend">
+            <field name="name">Vehicles / Legend </field>
+            <field name="theme_id" ref="theme_vehicles"/>
+            <field name="level_id" ref="level_legend"/>
+        </record>
+
+        
     </data>
 
 </odoo>
