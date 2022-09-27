@@ -65,12 +65,12 @@
             <field name="limit_up">100.0</field>
         </record>
 
-        <record model="swapi.quizz" id="species_padawan">
+        <!-- <record model="swapi.quizz" id="species_padawan">
             <field name="name">Species / Padawan </field>
             <field name="theme_id" ref="swapi.theme"/>
             
             
-        </record>
+        </record> -->
         
     </data>
 
