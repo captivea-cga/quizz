@@ -42,10 +42,10 @@
             <field name="model">swapi.quizz</field>
             <field name="arch" type="xml">
             
-                <tree string="Quizz List" position="inside">
-                    <header>
+                <tree string="Quizz List" >
+                    <!-- <header>
                         <button name="create_all_quizz" string="Create All Quizz" type="object" class="btn-primary"/>
-                    </header>
+                    </header> -->
                     <field name="name"/>
                     <field name="player_id"/>
                     <field name="theme_id"/>

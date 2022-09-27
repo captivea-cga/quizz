@@ -69,7 +69,24 @@
             <field name="name">Species / Padawan </field>
             <field name="theme_id" ref="theme_species"/>
             <field name="level_id" ref="level_padawan"/>
-            
+        </record>
+
+        <record model="swapi.quizz" id="species_jedi">
+            <field name="name">Species / Jedi </field>
+            <field name="theme_id" ref="theme_species"/>
+            <field name="level_id" ref="level_jedi"/>
+        </record>
+
+        <record model="swapi.quizz" id="species_master">
+            <field name="name">Species / Master </field>
+            <field name="theme_id" ref="theme_species"/>
+            <field name="level_id" ref="level_master"/>
+        </record>
+
+        <record model="swapi.quizz" id="species_legend">
+            <field name="name">Species / Legend </field>
+            <field name="theme_id" ref="theme_species"/>
+            <field name="level_id" ref="level_legend"/>
         </record>
         
     </data>

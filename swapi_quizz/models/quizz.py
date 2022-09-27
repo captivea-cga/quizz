@@ -11,9 +11,9 @@ class Quizz(models.Model):
     _description = 'Quizz Info'
     
     name = fields.Char(string="Name")
-    player_id = fields.Many2one(comodel_name='swapi.player',
-                                       string='Player',
-                                )
+    # player_id = fields.Many2one(comodel_name='swapi.player',
+    #                                    string='Player',
+    #                             )
     theme_id = fields.Many2one(comodel_name='swapi.theme',
                                        string='Theme',
                                        required=True)
