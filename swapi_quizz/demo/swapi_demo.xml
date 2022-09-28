@@ -2,7 +2,7 @@
 
 <odoo>
     <data noupdate="1">
-        
+        <!-- HOME -->
         <record model="swapi.home" id="home_specie">
             <field name="name">SPECIES</field>
         </record>
@@ -25,6 +25,7 @@
             <field name="name">UPDATE ALL DATAS</field>
         </record>
 
+        <!-- THEME -->
         <record model="swapi.theme" id="theme_species">
             <field name="name">Species</field>
         </record>
@@ -44,6 +45,7 @@
             <field name="name">Vehicles</field>
         </record>
 
+    <!-- LEVEL -->
         <record model="swapi.level" id="level_padawan">
             <field name="name">Padawan</field>
             <field name="limit_down">0.0</field>
@@ -65,6 +67,7 @@
             <field name="limit_up">100.0</field>
         </record>
 
+    <!-- QUIZZ -->
         <record model="swapi.quizz" id="species_padawan">
             <field name="name">Species / Padawan </field>
             <field name="theme_id" ref="theme_species"/>
@@ -154,7 +157,7 @@
             <field name="theme_id" ref="theme_people"/>
             <field name="level_id" ref="level_master"/>
         </record>
-films
+
         <record model="swapi.quizz" id="people_legend">
             <field name="name">People / Legend </field>
             <field name="theme_id" ref="theme_people"/>
@@ -209,6 +212,8 @@ films
             <field name="level_id" ref="level_legend"/>
         </record>
 
+    <!-- question_template -->
+            <!-- Padawan -->
         <record model="swapi.question_template" id="question_template_species_padawan">
             <field name="theme_id" ref="theme_species"/>
             <field name="level_id" ref="level_padawan"/>
@@ -220,7 +225,11 @@ films
             <field name="level_id" ref="level_padawan"/>
             <field name="question_template">In wich film(s) can wee see this planet ?</field>
         </record>
-
+        <record model="swapi.question_template" id="question_template_films_padawan">
+                    <field name="theme_id" ref="theme_films"/>
+                    <field name="level_id" ref="level_padawan"/>
+                    <field name="question_template">Name all characters of this film</field>
+        </record>
         <record model="swapi.question_template" id="question_template_people_padawan">
             <field name="theme_id" ref="theme_people"/>
             <field name="level_id" ref="level_padawan"/>
@@ -238,7 +247,74 @@ films
             <field name="level_id" ref="level_padawan"/>
             <field name="question_template">In wich film(s) can wee see this vehicle ?</field>
         </record>
+            <!-- Jedi   -->
+        <record model="swapi.question_template" id="question_template_species_jedi">
+            <field name="theme_id" ref="theme_species"/>
+            <field name="level_id" ref="level_jedi"/>
+            <field name="question_template">Name all people of this specie</field>
+        </record>
 
+        <record model="swapi.question_template" id="question_template_planets_jedi">
+            <field name="theme_id" ref="theme_planets"/>
+            <field name="level_id" ref="level_jedi"/>
+            <field name="question_template">Name all residents of this planet</field>
+        </record>
+        <record model="swapi.question_template" id="question_template_films_jedi">
+                    <field name="theme_id" ref="theme_films"/>
+                    <field name="level_id" ref="level_jedi"/>
+                    <field name="question_template">Name all species of this film</field>
+        </record>
+        <record model="swapi.question_template" id="question_template_people_jedi">
+            <field name="theme_id" ref="theme_people"/>
+            <field name="level_id" ref="level_jedi"/>
+            <field name="question_template">Name all starships piloted by this character</field>
+        </record>
+
+        <record model="swapi.question_template" id="question_template_starships_jedi">
+            <field name="theme_id" ref="theme_starships"/>
+            <field name="level_id" ref="level_jedi"/>
+            <field name="question_template">Name all pilots of this starship</field>
+        </record>
+
+        <record model="swapi.question_template" id="question_template_vehicles_jedi">
+            <field name="theme_id" ref="theme_vehicles"/>
+            <field name="level_id" ref="level_jedi"/>
+            <field name="question_template">Name all pilots of this vehicle</field>
+        </record>
+            <!-- Master   -->
+        <record model="swapi.question_template" id="question_template_species_master">
+            <field name="theme_id" ref="theme_species"/>
+            <field name="level_id" ref="level_master"/>
+            <field name="question_template">Name the planet where this specie lives</field>
+        </record>
+
+        <record model="swapi.question_template" id="question_template_planets_master">
+            <field name="theme_id" ref="theme_planets"/>
+            <field name="level_id" ref="level_master"/>
+            <field name="question_template">What is the population of this planet ? (+/- 10% of error is accepted)</field>
+        </record>
+        <record model="swapi.question_template" id="question_template_films_master">
+                    <field name="theme_id" ref="theme_films"/>
+                    <field name="level_id" ref="level_master"/>
+                    <field name="question_template">Name all planets of this film</field>
+        </record>
+        <record model="swapi.question_template" id="question_template_people_master">
+            <field name="theme_id" ref="theme_people"/>
+            <field name="level_id" ref="level_master"/>
+            <field name="question_template">Name all vehicles piloted by this character</field>
+        </record>
+
+        <record model="swapi.question_template" id="question_template_starships_master">
+            <field name="theme_id" ref="theme_starships"/>
+            <field name="level_id" ref="level_master"/>
+            <field name="question_template">How many passengers in this starship ? (+/- 10% of error is accepted)</field>
+        </record>
+
+        <record model="swapi.question_template" id="question_template_vehicles_master">
+            <field name="theme_id" ref="theme_vehicles"/>
+            <field name="level_id" ref="level_master"/>
+            <field name="question_template">How many passengers in this vehicle (+/- 10% of error is accepted)</field>
+        </record>
         
     </data>
 
