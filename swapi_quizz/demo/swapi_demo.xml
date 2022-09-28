@@ -209,6 +209,12 @@ films
             <field name="level_id" ref="level_legend"/>
         </record>
 
+        <record model="swapi.question_template" id="qustion_template_species_padawan">
+            <field name="theme_id" ref="theme_species"/>
+            <field name="level_id" ref="level_padawan"/>
+            <field name="question_template">In wich film(s) can wee see this specie ?</field>
+        </record>
+
         
     </data>
 

@@ -1,0 +1,41 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="question_template_view_form">
+            <field name="name">swapi.question_template.form</field>
+            <field name="model">swapi.question_template</field>
+            <field name="arch" type="xml">
+                <form string="Question Template Form" create="false">
+                    <sheet>
+                        <group>
+
+                            <group>
+                                <field name="question_template"/>
+                            </group>
+                            <group>
+                                <field name="theme_id" />
+                                <field name="level_id" />
+                            </group>  
+                        </group>
+                                                
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="question_template_view_list">
+            <field name="name">swapi.question_template.list</field>
+            <field name="model">swapi.question_template</field>
+            <field name="arch" type="xml">
+            
+                <tree string="Question Template List" create="false">
+
+                    <field name="question_template"/>
+                    <field name="theme_id"/>
+                    <field name="level_id"/>
+                </tree>
+            </field>
+        </record>    
+    </data>
+</odoo>
