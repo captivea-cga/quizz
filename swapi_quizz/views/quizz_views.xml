@@ -9,7 +9,7 @@
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_card oe_kanban_global_click">
-                                <div class="o_kanban_card_content">
+                                <div class="o_kanban_card_content" style="background-color: blue">
                                     <div>
                                         <h2>
                                             <field name="name"/>
