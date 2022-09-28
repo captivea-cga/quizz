@@ -5,7 +5,7 @@
             <field name="name">swapi.people.form</field>
             <field name="model">swapi.people</field>
             <field name="arch" type="xml">
-                <form string="Specie Form">
+                <form string="Specie Form" create="false">
 <!--                     <button name="update_specie"
                     type="object"
                     string="Update"
@@ -72,7 +72,7 @@
             <field name="model">swapi.people</field>
             <field name="arch" type="xml">
             
-                <tree string="People List">
+                <tree string="People List" create="false">
                     
                     <field name="name"/>
                     <field name="gender"/>

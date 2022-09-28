@@ -5,7 +5,7 @@
             <field name="name">swapi.planet.form</field>
             <field name="model">swapi.planet</field>
             <field name="arch" type="xml">
-                <form string="Planet Form">
+                <form string="Planet Form" create="false">
                     <sheet>
                         <h1><field name="name"/></h1>
                         <notebook>
@@ -55,7 +55,7 @@
             <field name="model">swapi.planet</field>
             <field name="arch" type="xml">
             
-                <tree string="Planet List">
+                <tree string="Planet List" create="false">
                     
                     <field name="name"/>
                     <field name="diameter"/>

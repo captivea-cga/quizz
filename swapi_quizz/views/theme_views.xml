@@ -5,7 +5,7 @@
             <field name="name">swapi.theme.form</field>
             <field name="model">swapi.theme</field>
             <field name="arch" type="xml">
-                <form string="Theme Form">
+                <form string="Theme Form" create="false">
                     <sheet>
                         <group>
                             <h1><field name="name"/></h1>
@@ -22,7 +22,7 @@
             <field name="model">swapi.theme</field>
             <field name="arch" type="xml">
             
-                <tree string="Theme List" >
+                <tree string="Theme List" create="false">
                     <field name="name"/>
                 </tree>
             </field>

@@ -14,7 +14,6 @@
                                         <h2>
                                             <field name="name"/>
                                         </h2>
-                                        <span style="background-color:blue"/>
                                     </div>
                                     <div>
                                         <span style="font-weight: bold;">
@@ -49,7 +48,7 @@
             <field name="name">swapi.quizz.form</field>
             <field name="model">swapi.quizz</field>
             <field name="arch" type="xml">
-                <form string="Quizz Form">
+                <form string="Quizz Form" create="false">
                     <sheet>
                         <h1><field name="name"/></h1>
                         <group>
@@ -86,7 +85,7 @@
             <field name="model">swapi.quizz</field>
             <field name="arch" type="xml">
             
-                <tree string="Quizz List" >
+                <tree string="Quizz List" create="false">
                     <!-- <header>
                         <button name="create_all_quizz" string="Create All Quizz" type="object" class="btn-primary"/>
                     </header> -->

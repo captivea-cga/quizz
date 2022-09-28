@@ -5,7 +5,7 @@
             <field name="name">swapi.film.form</field>
             <field name="model">swapi.film</field>
             <field name="arch" type="xml">
-                <form string="Film Form">
+                <form string="Film Form" create="false">
                     <sheet>
                         <group>
                             <group>
