@@ -48,7 +48,7 @@
             <field name="name">swapi.quizz.form</field>
             <field name="model">swapi.quizz</field>
             <field name="arch" type="xml">
-                <form string="Quizz Form" create="false">
+                <form string="Quizz Form" create="false" edit="false">
                     <sheet>
                         <h1><field name="name"/></h1>
                         <group>
