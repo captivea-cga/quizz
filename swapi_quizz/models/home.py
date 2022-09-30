@@ -277,7 +277,7 @@ class Home(models.Model):
                                     new_film['starship_ids'] = [(4,starship_url.id)]
                             for vehicle in vehicles:
                                 vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                if vehicle_url
+                                if vehicle_url:
                                     new_film['vehicle_ids'] = [(4,vehicle_url.id)]
                             for character in characters:
                                 people_url = self.env['swapi.people'].search([('url','=',character)])
