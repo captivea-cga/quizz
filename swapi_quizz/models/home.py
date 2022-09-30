@@ -54,16 +54,19 @@ class Home(models.Model):
                             
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
-                                specie['film_ids'] = [(4,film_url.id)]
+                                if film_url:
+                                    specie['film_ids'] = [(4,film_url.id)]
                             
                             
                             
                             for character in people:
                                 character_url = self.env['swapi.people'].search([('url','=',character)])
-                                specie['people_ids'] = [(4,character_url.id)]
+                                if character_url:
+                                    specie['people_ids'] = [(4,character_url.id)]
                                 
                             planet = self.env['swapi.planet'].search([('url','=',specie['homeworld'])])
-                            specie['planet_ids'] = planet
+                            if planet:
+                                specie['planet_ids'] = planet
                             
                         else:
                             # this specie is not in the database, so insert it
@@ -85,12 +88,15 @@ class Home(models.Model):
                             })
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
-                                new_specie['film_ids'] = [(4,film_url.id)]
+                                if film_url:
+                                    new_specie['film_ids'] = [(4,film_url.id)]
                             for character in people:
                                 people_url = self.env['swapi.people'].search([('url','=',character)])
-                                new_specie['people_ids'] = [(4,people_url.id)]
+                                if people_url:
+                                    new_specie['people_ids'] = [(4,people_url.id)]
                             planet = self.env['swapi.planet'].search([('url','=',specie['homeworld'])])
-                            new_specie['planet_ids'] = planet
+                            if planet:
+                                new_specie['planet_ids'] = planet
                     
                     
                 elif line == 'next':
