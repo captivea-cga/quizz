@@ -234,19 +234,24 @@ class Home(models.Model):
                             
                             for specie in species:
                                 specie_url = self.env['swapi.specie'].search([('url','=',specie)])
-                                film['specie_ids'] = [(4,specie_url.id)]
+                                if specie_url:
+                                    film['specie_ids'] = [(4,specie_url.id)]
                             for starship in starships:
                                 starship_url = self.env['swapi.starship'].search([('url','=',starship)])
-                                film['starship_ids'] = [(4,starship_url.id)]
+                                if starship_url:
+                                    film['starship_ids'] = [(4,starship_url.id)]
                             for vehicle in vehicles:
                                 vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                film['vehicle_ids'] = [(4,vehicle_url.id)]
+                                if vehicle_url:
+                                    film['vehicle_ids'] = [(4,vehicle_url.id)]
                             for character in characters:
                                 people_url = self.env['swapi.people'].search([('url','=',character)])
-                                film['people_ids'] = [(4,people_url.id)]
+                                if people_url:
+                                    film['people_ids'] = [(4,people_url.id)]
                             for planet in planets:
                                 planet_url = self.env['swapi.planet'].search([('url','=',planet)])
-                                film['planet_ids'] = [(4,planet_url.id)]
+                                if planet_url:
+                                    film['planet_ids'] = [(4,planet_url.id)]
                             
                         else:
                             # this specie is not in the database, so insert it
@@ -264,19 +269,24 @@ class Home(models.Model):
                                 })
                             for specie in species:
                                 specie_url = self.env['swapi.specie'].search([('url','=',specie)])
-                                new_film['specie_ids'] = [(4,specie_url.id)]
+                                if specie_url:
+                                    new_film['specie_ids'] = [(4,specie_url.id)]
                             for starship in starships:
                                 starship_url = self.env['swapi.starship'].search([('url','=',starship)])
-                                new_film['starship_ids'] = [(4,starship_url.id)]
+                                if starship_url:
+                                    new_film['starship_ids'] = [(4,starship_url.id)]
                             for vehicle in vehicles:
                                 vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                new_film['vehicle_ids'] = [(4,vehicle_url.id)]
+                                if vehicle_url
+                                    new_film['vehicle_ids'] = [(4,vehicle_url.id)]
                             for character in characters:
                                 people_url = self.env['swapi.people'].search([('url','=',character)])
-                                new_film['people_ids'] = [(4,people_url.id)]
+                                if people_url:
+                                    new_film['people_ids'] = [(4,people_url.id)]
                             for planet in planets:
                                 planet_url = self.env['swapi.planet'].search([('url','=',planet)])
-                                new_film['planet_ids'] = [(4,planet_url.id)]
+                                if planet_url:
+                                    new_film['planet_ids'] = [(4,planet_url.id)]
                         # endif
                     # endfor
                     
@@ -333,18 +343,23 @@ class Home(models.Model):
 
                                 for specie in species:
                                     specie_url = self.env['swapi.specie'].search([('url','=',specie)])
-                                    people['specie_ids'] = [(4,specie_url.id)]
+                                    if specie_url:
+                                        people['specie_ids'] = [(4,specie_url.id)]
                                 for starship in starships:
                                     starship_url = self.env['swapi.starship'].search([('url','=',starship)])
-                                    people['starship_ids'] = [(4,starship_url.id)]
+                                    if starship_url:
+                                        people['starship_ids'] = [(4,starship_url.id)]
                                 for vehicle in vehicles:
                                     vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                    people['vehicle_ids'] = [(4,vehicle_url.id)]
+                                    if vehicle_url:
+                                        people['vehicle_ids'] = [(4,vehicle_url.id)]
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    people['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        people['film_ids'] = [(4,film_url.id)]
                                 planet = self.env['swapi.planet'].search([('url','=',people['homeworld'])])
-                                people['planet_ids'] = planet
+                                if planet:
+                                    people['planet_ids'] = planet
                             else:
                                 # this specie is not in the database, so insert it
 
@@ -364,19 +379,24 @@ class Home(models.Model):
                                 })
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    new_people['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        new_people['film_ids'] = [(4,film_url.id)]
                                 for specie in species:
                                     specie_url = self.env['swapi.specie'].search([('url','=',specie)])
-                                    new_people['specie_ids'] = [(4,specie_url.id)]
+                                    if specie_url:
+                                        new_people['specie_ids'] = [(4,specie_url.id)]
                                 for starship in starships:
                                     starship_url = self.env['swapi.starship'].search([('url','=',starship)])
-                                    new_people['starship_ids'] = [(4,starship_url.id)]
+                                    if starship_url:
+                                        new_people['starship_ids'] = [(4,starship_url.id)]
                                 for vehicle in vehicles:
                                     vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                    new_people['vehicle_ids'] = [(4,vehicle_url.id)]
+                                    if vehicle_url:
+                                        new_people['vehicle_ids'] = [(4,vehicle_url.id)]
 
                                 planet = self.env['swapi.planet'].search([('url','=',specie['homeworld'])])
-                                new_people['planet_ids'] = planet
+                                if planet:
+                                    new_people['planet_ids'] = planet
                             # endif
                         # endfor
 
@@ -435,10 +455,12 @@ class Home(models.Model):
                             
                             for pilot in pilots:
                                 pilot_url = self.env['swapi.people'].search([('url','=',pilot)])
-                                starship['people_ids'] = [(4,pilot_url.id)]
+                                if pilot_url:
+                                    starship['people_ids'] = [(4,pilot_url.id)]
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
-                                starship['film_ids'] = [(4,film_url.id)]
+                                if film_url:
+                                    starship['film_ids'] = [(4,film_url.id)]
                         else:
                             # this specie is not in the database, so insert it
 
@@ -464,9 +486,11 @@ class Home(models.Model):
                             
                             for pilot in pilots:
                                 pilot_url = self.env['swapi.people'].search([('url','=',pilot)])
-                                new_starship['people_ids'] = [(4,pilot_url.id)]
+                                if pilot_url:
+                                    new_starship['people_ids'] = [(4,pilot_url.id)]
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
+                                if film_url:
                                 new_starship['film_ids'] = [(4,film_url.id)]
                         # endif
                     # endfor
@@ -523,10 +547,12 @@ class Home(models.Model):
                             
                             for pilot in pilots:
                                 pilot_url = self.env['swapi.people'].search([('url','=',pilot)])
-                                vehicle['people_ids'] = [(4,pilot_url.id)]
+                                if pilot_url:
+                                    vehicle['people_ids'] = [(4,pilot_url.id)]
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
-                                vehicle['film_ids'] = [(4,film_url.id)]
+                                if film_url:
+                                    vehicle['film_ids'] = [(4,film_url.id)]
                                 
                         else:
                             # this specie is not in the database, so insert it
@@ -551,10 +577,12 @@ class Home(models.Model):
                             
                             for pilot in pilots:
                                 pilot_url = self.env['swapi.people'].search([('url','=',pilot)])
-                                new_vehicle['people_ids'] = [(4,pilot_url.id)]
+                                if pilot_url:
+                                    new_vehicle['people_ids'] = [(4,pilot_url.id)]
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
-                                new_vehicle['film_ids'] = [(4,film_url.id)]
+                                if film_url:
+                                    new_vehicle['film_ids'] = [(4,film_url.id)]
                         # endif
                     # endfor
                     
@@ -612,16 +640,19 @@ class Home(models.Model):
 
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    specie['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        specie['film_ids'] = [(4,film_url.id)]
 
 
 
                                 for character in people:
                                     character_url = self.env['swapi.people'].search([('url','=',character)])
-                                    specie['people_ids'] = [(4,character_url.id)]
+                                    if character_url:
+                                        specie['people_ids'] = [(4,character_url.id)]
 
                                 planet = self.env['swapi.planet'].search([('url','=',specie['homeworld'])])
-                                specie['planet_ids'] = planet
+                                if planet:
+                                    specie['planet_ids'] = planet
 
                             else:
                                 # this specie is not in the database, so insert it
@@ -643,12 +674,15 @@ class Home(models.Model):
                                 })
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    new_specie['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        new_specie['film_ids'] = [(4,film_url.id)]
                                 for character in people:
                                     people_url = self.env['swapi.people'].search([('url','=',character)])
-                                    new_specie['people_ids'] = [(4,people_url.id)]
+                                    if people_url:
+                                        new_specie['people_ids'] = [(4,people_url.id)]
                                 planet = self.env['swapi.planet'].search([('url','=',specie['homeworld'])])
-                                new_specie['planet_ids'] = planet
+                                if planet:
+                                    new_specie['planet_ids'] = planet
 
 
                     elif line == 'next':
@@ -688,10 +722,12 @@ class Home(models.Model):
 
                                 for resident in residents:
                                     resident_url = self.env['swapi.people'].search([('url','=',resident)])
-                                    planet['people_ids'] = [(4,resident_url.id)]
+                                    if resident_url:
+                                        planet['people_ids'] = [(4,resident_url.id)]
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    planet['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        planet['film_ids'] = [(4,film_url.id)]
                             else:
                                 # this specie is not in the database, so insert it
 
@@ -711,10 +747,12 @@ class Home(models.Model):
                                 })
                                 for resident in residents:
                                     resident_url = self.env['swapi.people'].search([('url','=',resident)])
-                                    new_planet['people_ids'] = [(4,resident_url.id)]
+                                    if resident_url:
+                                        new_planet['people_ids'] = [(4,resident_url.id)]
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    new_planet['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        new_planet['film_ids'] = [(4,film_url.id)]
                             # endif
                         # endfor
 
@@ -754,19 +792,24 @@ class Home(models.Model):
 
                                 for specie in species:
                                     specie_url = self.env['swapi.specie'].search([('url','=',specie)])
-                                    film['specie_ids'] = [(4,specie_url.id)]
+                                    if specie_url:
+                                        film['specie_ids'] = [(4,specie_url.id)]
                                 for starship in starships:
                                     starship_url = self.env['swapi.starship'].search([('url','=',starship)])
-                                    film['starship_ids'] = [(4,starship_url.id)]
+                                    if starship_url:
+                                        film['starship_ids'] = [(4,starship_url.id)]
                                 for vehicle in vehicles:
                                     vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                    film['vehicle_ids'] = [(4,vehicle_url.id)]
+                                    if vehicle_url:
+                                        film['vehicle_ids'] = [(4,vehicle_url.id)]
                                 for character in characters:
                                     people_url = self.env['swapi.people'].search([('url','=',character)])
-                                    film['people_ids'] = [(4,people_url.id)]
+                                    if people_url:
+                                        film['people_ids'] = [(4,people_url.id)]
                                 for planet in planets:
                                     planet_url = self.env['swapi.planet'].search([('url','=',planet)])
-                                    film['planet_ids'] = [(4,planet_url.id)]
+                                    if planet_url:
+                                        film['planet_ids'] = [(4,planet_url.id)]
 
                             else:
                                 # this specie is not in the database, so insert it
@@ -784,19 +827,24 @@ class Home(models.Model):
                                     })
                                 for specie in species:
                                     specie_url = self.env['swapi.specie'].search([('url','=',specie)])
-                                    new_film['specie_ids'] = [(4,specie_url.id)]
+                                    if specie_url:
+                                        new_film['specie_ids'] = [(4,specie_url.id)]
                                 for starship in starships:
                                     starship_url = self.env['swapi.starship'].search([('url','=',starship)])
-                                    new_film['starship_ids'] = [(4,starship_url.id)]
+                                    if starship_url:
+                                        new_film['starship_ids'] = [(4,starship_url.id)]
                                 for vehicle in vehicles:
                                     vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                    new_film['vehicle_ids'] = [(4,vehicle_url.id)]
+                                    if vehicle_url:
+                                        new_film['vehicle_ids'] = [(4,vehicle_url.id)]
                                 for character in characters:
                                     people_url = self.env['swapi.people'].search([('url','=',character)])
-                                    new_film['people_ids'] = [(4,people_url.id)]
+                                    if people_url:
+                                        new_film['people_ids'] = [(4,people_url.id)]
                                 for planet in planets:
                                     planet_url = self.env['swapi.planet'].search([('url','=',planet)])
-                                    new_film['planet_ids'] = [(4,planet_url.id)]
+                                    if planet_url:
+                                        new_film['planet_ids'] = [(4,planet_url.id)]
                             # endif
                         # endfor
 
@@ -838,18 +886,23 @@ class Home(models.Model):
 
                                 for specie in species:
                                     specie_url = self.env['swapi.specie'].search([('url','=',specie)])
-                                    people['specie_ids'] = [(4,specie_url.id)]
+                                    if specie_url:
+                                        people['specie_ids'] = [(4,specie_url.id)]
                                 for starship in starships:
                                     starship_url = self.env['swapi.starship'].search([('url','=',starship)])
-                                    people['starship_ids'] = [(4,starship_url.id)]
+                                    if starship_url:
+                                        people['starship_ids'] = [(4,starship_url.id)]
                                 for vehicle in vehicles:
                                     vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                    people['vehicle_ids'] = [(4,vehicle_url.id)]
+                                    if vehicle_url:
+                                        people['vehicle_ids'] = [(4,vehicle_url.id)]
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    people['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        people['film_ids'] = [(4,film_url.id)]
                                 planet = self.env['swapi.planet'].search([('url','=',people['homeworld'])])
-                                people['planet_ids'] = planet
+                                if planet:
+                                    people['planet_ids'] = planet
                             else:
                                 # this specie is not in the database, so insert it
 
@@ -869,19 +922,24 @@ class Home(models.Model):
                                 })
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    new_people['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        new_people['film_ids'] = [(4,film_url.id)]
                                 for specie in species:
                                     specie_url = self.env['swapi.specie'].search([('url','=',specie)])
-                                    new_people['specie_ids'] = [(4,specie_url.id)]
+                                    if specie_url:
+                                        new_people['specie_ids'] = [(4,specie_url.id)]
                                 for starship in starships:
                                     starship_url = self.env['swapi.starship'].search([('url','=',starship)])
-                                    new_people['starship_ids'] = [(4,starship_url.id)]
+                                    if starship_url:
+                                        new_people['starship_ids'] = [(4,starship_url.id)]
                                 for vehicle in vehicles:
                                     vehicle_url = self.env['swapi.vehicle'].search([('url','=',vehicle)])
-                                    new_people['vehicle_ids'] = [(4,vehicle_url.id)]
+                                    if vehicle_url:
+                                        new_people['vehicle_ids'] = [(4,vehicle_url.id)]
 
                                 planet = self.env['swapi.planet'].search([('url','=',specie['homeworld'])])
-                                new_people['planet_ids'] = planet
+                                if planet:
+                                    new_people['planet_ids'] = planet
                             # endif
                         # endfor
 
@@ -926,10 +984,12 @@ class Home(models.Model):
 
                                 for pilot in pilots:
                                     pilot_url = self.env['swapi.people'].search([('url','=',pilot)])
-                                    starship['people_ids'] = [(4,pilot_url.id)]
+                                    if pilot_url:
+                                        starship['people_ids'] = [(4,pilot_url.id)]
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    starship['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        starship['film_ids'] = [(4,film_url.id)]
                             else:
                                 # this specie is not in the database, so insert it
 
@@ -955,10 +1015,12 @@ class Home(models.Model):
 
                                 for pilot in pilots:
                                     pilot_url = self.env['swapi.people'].search([('url','=',pilot)])
-                                    new_starship['people_ids'] = [(4,pilot_url.id)]
+                                    if pilot_url:
+                                        new_starship['people_ids'] = [(4,pilot_url.id)]
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    new_starship['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        new_starship['film_ids'] = [(4,film_url.id)]
                             # endif
                         # endfor
 
@@ -1000,10 +1062,12 @@ class Home(models.Model):
 
                                 for pilot in pilots:
                                     pilot_url = self.env['swapi.people'].search([('url','=',pilot)])
-                                    vehicle['people_ids'] = [(4,pilot_url.id)]
+                                    if pilot_url:
+                                        vehicle['people_ids'] = [(4,pilot_url.id)]
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    vehicle['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        vehicle['film_ids'] = [(4,film_url.id)]
 
                             else:
                                 # this specie is not in the database, so insert it
@@ -1028,10 +1092,12 @@ class Home(models.Model):
 
                                 for pilot in pilots:
                                     pilot_url = self.env['swapi.people'].search([('url','=',pilot)])
-                                    new_vehicle['people_ids'] = [(4,pilot_url.id)]
+                                    if pilot_url:
+                                        new_vehicle['people_ids'] = [(4,pilot_url.id)]
                                 for film in films:
                                     film_url = self.env['swapi.film'].search([('url','=',film)])
-                                    new_vehicle['film_ids'] = [(4,film_url.id)]
+                                    if film_url:
+                                        new_vehicle['film_ids'] = [(4,film_url.id)]
                             # endif
                         # endfor
 
