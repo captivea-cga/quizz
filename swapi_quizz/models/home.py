@@ -417,6 +417,7 @@ class Home(models.Model):
 #             }
             return True
 
+
 #     UPDATE STARSHIP
 
     def update_starships(self):
