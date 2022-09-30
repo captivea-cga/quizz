@@ -1,0 +1,30 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="swapi_quizz_wizard_form_view">
+            <field name="name">swapi.quizz.wizard.form</field>
+            <field name="model">swapi.quizz.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Configure a quizz">
+                    <p>Choose theme and level and GO
+                    </p>
+                    <footer>
+                        <button name="start_quizz" type="object"
+                                string="Start Quizz" class="oe_highlight"/>
+                        
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="launch_quizz_wizard"
+                model="ir.actions.act_window">
+            <field name="name">Quizz_wizard</field>
+            <field name="res_model">swapi.quizz.wizard</field>
+            <field name="binding_model_id" ref="swapi_quizz.model_swapi_quizz"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+       
+   </data>
+</odoo>
