@@ -25,6 +25,7 @@ class Home(models.Model):
             response = requests.get(next_request)
             json_data = json.loads(response.content)
             
+            
             # read each line of JSON
             for line in json_data:
                 if line == 'results':
