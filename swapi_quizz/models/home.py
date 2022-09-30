@@ -150,10 +150,12 @@ class Home(models.Model):
                             
                             for resident in residents:
                                 resident_url = self.env['swapi.people'].search([('url','=',resident)])
-                                planet['people_ids'] = [(4,resident_url.id)]
+                                if resident_url:
+                                    planet['people_ids'] = [(4,resident_url.id)]
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
-                                planet['film_ids'] = [(4,film_url.id)]
+                                if film_url:
+                                    planet['film_ids'] = [(4,film_url.id)]
                         else:
                             # this specie is not in the database, so insert it
 
@@ -173,10 +175,12 @@ class Home(models.Model):
                             })
                             for resident in residents:
                                 resident_url = self.env['swapi.people'].search([('url','=',resident)])
-                                new_planet['people_ids'] = [(4,resident_url.id)]
+                                if resident_url:
+                                    new_planet['people_ids'] = [(4,resident_url.id)]
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
-                                new_planet['film_ids'] = [(4,film_url.id)]
+                                if film_url:
+                                    new_planet['film_ids'] = [(4,film_url.id)]
                         # endif
                     # endfor
                     
