@@ -5,7 +5,7 @@
             <field name="name">swapi.starship.form</field>
             <field name="model">swapi.starship</field>
             <field name="arch" type="xml">
-                <form string="Starship Form">
+                <form string="Starship Form" create="false">
                     <sheet>
                         <group>
                             <group>
@@ -70,7 +70,7 @@
             <field name="model">swapi.starship</field>
             <field name="arch" type="xml">
             
-                <tree string="Starship List">
+                <tree string="Starship List" create="false">
                     
                     <field name="name"/>
                     <field name="cost_in_credits"/>

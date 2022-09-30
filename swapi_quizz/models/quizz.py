@@ -11,9 +11,9 @@ class Quizz(models.Model):
     _description = 'Quizz Info'
     
     name = fields.Char(string="Name")
-    player_id = fields.Many2one(comodel_name='swapi.player',
-                                       string='Player',
-                                       required=True)
+    # player_id = fields.Many2one(comodel_name='swapi.player',
+    #                                    string='Player',
+    #                             )
     theme_id = fields.Many2one(comodel_name='swapi.theme',
                                        string='Theme',
                                        required=True)
@@ -41,6 +41,7 @@ class Quizz(models.Model):
                 self.proposition = str(specie_random.name)
                 # raise UserError(str(specie_random.name))
                 
-    
-                
+    # Faire une fonction pour créer les quizz (tous) et faire un boutton dans la vue liste : Create All Quizz
+    def create_all_quizz(self):
+        raise UserError("All Quizz")           
                      

@@ -5,7 +5,7 @@
             <field name="name">swapi.vehicle.form</field>
             <field name="model">swapi.vehicle</field>
             <field name="arch" type="xml">
-                <form string="Vehicle Form">
+                <form string="Vehicle Form" create="false">
                     <sheet>
                         <group>
                             <group>
@@ -64,7 +64,7 @@
             <field name="model">swapi.vehicle</field>
             <field name="arch" type="xml">
             
-                <tree string="Vehicle List">
+                <tree string="Vehicle List" create="false">
                     
                     <field name="name"/>
                     <field name="cost_in_credits"/>

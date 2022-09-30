@@ -11,3 +11,4 @@ from . import player
 from . import theme
 from . import level
 from . import quizz
+from . import question_template

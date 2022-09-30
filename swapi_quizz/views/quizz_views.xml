@@ -1,11 +1,54 @@
 <!-- <?xml version="1.0" encoding="utf-8"?> -->
 <odoo>
     <data>
+        <record model="ir.ui.view" id="quizz_view_kanban">
+            <field name="name">swapi.quizz.kanban</field>
+            <field name="model">swapi.quizz</field>
+            <field name="arch" type="xml">
+                <kanban string="QUIZZ" create="false" default_group_by="theme_id">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_card_content">
+                                    <div>
+                                        <h2>
+                                            <field name="name"/>
+                                        </h2>
+                                    </div>
+                                    <div>
+                                        <span style="font-weight: bold;">
+                                            Theme :
+                                        </span>
+                                        <span>
+                                            <field name="theme_id"/>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span style="font-weight: bold;">
+                                            Level :
+                                        </span>
+                                        <span>
+                                            <field name="level_id"/>
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record> 
+        
+        
+        
+        
+        
         <record model="ir.ui.view" id="quizz_view_form">
             <field name="name">swapi.quizz.form</field>
             <field name="model">swapi.quizz</field>
             <field name="arch" type="xml">
-                <form string="Quizz Form">
+                <form string="Quizz Form" create="false">
                     <sheet>
                         <h1><field name="name"/></h1>
                         <group>
@@ -42,14 +85,26 @@
             <field name="model">swapi.quizz</field>
             <field name="arch" type="xml">
             
-                <tree string="Quizz List" >
+                <tree string="Quizz List" create="false">
+                    <!-- <header>
+                        <button name="create_all_quizz" string="Create All Quizz" type="object" class="btn-primary"/>
+                    </header> -->
                     <field name="name"/>
-                    <field name="player_id"/>
+                    <!-- <field name="player_id"/> -->
                     <field name="theme_id"/>
                     <field name="level_id"/>
                 </tree>
             </field>
         </record>    
         
+
+
+
+
+        
+
+
+
+
     </data>
 </odoo>
