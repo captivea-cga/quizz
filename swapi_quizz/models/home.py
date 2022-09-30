@@ -491,7 +491,7 @@ class Home(models.Model):
                             for film in films:
                                 film_url = self.env['swapi.film'].search([('url','=',film)])
                                 if film_url:
-                                new_starship['film_ids'] = [(4,film_url.id)]
+                                    new_starship['film_ids'] = [(4,film_url.id)]
                         # endif
                     # endfor
                     
