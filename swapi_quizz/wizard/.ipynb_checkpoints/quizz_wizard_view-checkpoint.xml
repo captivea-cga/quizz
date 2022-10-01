@@ -5,9 +5,34 @@
             <field name="name">swapi.quizz.wizard.form</field>
             <field name="model">swapi.quizz.wizard</field>
             <field name="arch" type="xml">
-                <form string="Configure a quizz">
-                    <p>Choose theme and level and GO
-                    </p>
+                <form >
+                    <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <h5>
+                                        Theme :
+                                        <field name="theme_id"/>
+                                    </h5>
+                                </div>
+                                <div class="col-6">
+                                </div>
+                                <div class="col">
+                                    <h5>
+                                        Level :
+                                        <field name="level_id"/>
+                                    </h5>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h5>
+                                        Player :
+                                        <field name="player_id"/>
+                                    </h5>
+                                </div>
+                            </div>
+                    </div>
                     <footer>
                         <button name="start_quizz" type="object"
                                 string="Start Quizz" class="oe_highlight"/>
@@ -19,7 +44,7 @@
         </record>
         <record id="launch_quizz_wizard"
                 model="ir.actions.act_window">
-            <field name="name">Quizz_wizard</field>
+            <field name="name">Quizz</field>
             <field name="res_model">swapi.quizz.wizard</field>
             <field name="binding_model_id" ref="swapi_quizz.model_swapi_quizz"/>
             <field name="view_mode">form</field>
