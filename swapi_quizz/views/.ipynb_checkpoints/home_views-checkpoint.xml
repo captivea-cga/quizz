@@ -1,0 +1,214 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+                
+        <record model="ir.ui.view" id="home_view_kanban">
+            <field name="name">swapi.home.list</field>
+            <field name="model">swapi.home</field>
+            <field name="arch" type="xml">
+            <kanban string="HOME" create="false">
+                <templates>
+                    <t t-name="kanban-box">
+<!--                         SPECIES -->
+                        <div attrs="{'invisible':[('name','!=','SPECIES')]}">
+                            <div>
+                                <button class="btn btn-info"
+                                        style="margin-bottom:0.5em ; border-radius: 5px"
+                                        name="update_species"
+                                        help="To update datas of species"
+                                        type="object">
+                                    <span class="fa fa-solid fa-list" style="margin-right:0.5em" ></span>
+                                    Update <field name="name" modifiers="{}" />
+                                </button>                                    
+                            </div>
+                            <div>
+<!--                                 <button class="btn btn-dark"
+                                        style=" border-radius: 5px"
+                                        name="menu_species"
+                                        help="To display species"
+                                        type="object">
+                                    <span class="fa fa-solid fa-user" style="margin-right:0.5em "></span>
+                                    Menu <field name="name" modifiers="{}" /> 
+                                </button> -->
+                                <span class="badge badge-warning">
+                                    Last update : 
+                                     <field name="last_update" />
+                                </span>
+                            </div>
+                        </div>
+
+<!--                         PLANETS -->
+                        <div attrs="{'invisible':[('name','!=','PLANETS')]}">
+                            <div>
+                                <button class="btn btn-info"
+                                        style="margin-bottom:0.5em ; border-radius: 5px"
+                                        name="update_planets"
+                                        help="To update datas of planets"
+                                        type="object">
+                                    <span class="fa fa-solid fa-list" style="margin-right:0.5em" ></span>
+                                    Update <field name="name" modifiers="{}" />
+                                </button>
+                            </div>
+                            <div>
+<!--                                 <button class="btn btn-dark"
+                                             style=" border-radius: 5px"
+                                             name="menu_planets"
+                                             help="To display planets"
+                                             type="object">
+                                    <span class="fa fa-solid fa-user" style="margin-right:0.5em"></span>
+                                    Menu <field name="name" modifiers="{}" />  
+                                </button> -->
+                                <span class="badge badge-warning">
+                                    Last update : 
+                                     <field name="last_update" />
+                                </span>
+                            </div>
+                        </div>
+<!--                         FILMS -->
+                        <div attrs="{'invisible':[('name','!=','FILMS')]}">
+                            <div>
+                                <button class="btn btn-info"
+                                        style="margin-bottom:0.5em ; border-radius: 5px"
+                                        name="update_films"
+                                        help="To update datas of films"
+                                        type="object">
+                                    <span class="fa fa-solid fa-list" style="margin-right:0.5em" ></span>
+                                    Update <field name="name" modifiers="{}" />
+                                </button>
+                            </div>
+                            <div>
+<!--                                 <button class="btn btn-dark"
+                                        style=" border-radius: 5px"
+                                        name="menu_films"
+                                        help="To display films"
+                                        type="object">
+                                    <span class="fa fa-solid fa-user" style="margin-right:0.5em"></span>
+                                    Menu <field name="name" modifiers="{}" /> 
+                                </button> -->
+                                <span class="badge badge-warning">
+                                    Last update : 
+                                     <field name="last_update" />
+                                </span>
+                            </div>
+                        </div>
+                        
+<!--                         PEOPLE -->
+                        <div attrs="{'invisible':[('name','!=','PEOPLE')]}">
+                            <div>
+                                <button class="btn btn-info"
+                                        style="margin-bottom:0.5em ; border-radius: 5px"
+                                        name="update_people"
+                                        help="To update datas of people"
+                                        type="object">
+                                    <span class="fa fa-solid fa-list" style="margin-right:0.5em" ></span>
+                                    Update <field name="name" modifiers="{}" />
+                                </button>
+                            </div>
+                            <div>
+<!--                                 <button class="btn btn-dark"
+                                        style=" border-radius: 5px"
+                                        name="menu_people"
+                                        help="To display people"
+                                        type="object">
+                                    <span class="fa fa-solid fa-user" style="margin-right:0.5em"></span>
+                                    Menu <field name="name" modifiers="{}" /> 
+                                </button> -->
+                                <span class="badge badge-warning">
+                                    Last update : 
+                                     <field name="last_update" />
+                                </span>
+                            </div>
+                        </div>
+                        
+<!--                         STARSHIPS -->
+                        <div attrs="{'invisible':[('name','!=','STARSHIPS')]}">
+                            <div>
+                                <button class="btn btn-info"
+                                        style="margin-bottom:0.5em ; border-radius: 5px"
+                                        name="update_starships"
+                                        help="To update datas of starships"
+                                        type="object">
+                                    <span class="fa fa-solid fa-list" style="margin-right:0.5em" ></span>
+                                    Update <field name="name" modifiers="{}" />
+                                </button>
+                            </div>
+                            <div>
+<!--                                 <button class="btn btn-dark"
+                                        style=" border-radius: 5px"
+                                        name="menu_starships"
+                                        help="To display starships"
+                                        type="object">
+                                    <span class="fa fa-solid fa-user" style="margin-right:0.5em"></span>
+                                    Menu <field name="name" modifiers="{}" /> 
+                                </button> -->
+                                <span class="badge badge-warning">
+                                    Last update : 
+                                     <field name="last_update" />
+                                </span>
+                            </div>
+                        </div>
+                        
+<!--                         VEHICLES -->
+                        <div attrs="{'invisible':[('name','!=','VEHICLES')]}">
+                            <div>
+                                <button class="btn btn-info"
+                                        style="margin-bottom:0.5em ; border-radius: 5px"
+                                        name="update_vehicles" 
+                                        help="To update datas of vehicles"
+                                        type="object">
+                                    <span class="fa fa-solid fa-list" style="margin-right:0.5em" ></span>
+                                    Update <field name="name" modifiers="{}" />
+                                </button>
+                            </div>
+                            <div>
+<!--                                 <button class="btn btn-dark"
+                                        style=" border-radius: 5px"
+                                        name="menu_vehicles"
+                                        help="To display vehicles"
+                                        type="object">
+                                    <span class="fa fa-solid fa-user" style="margin-right:0.5em"></span>
+                                    Menu <field name="name" modifiers="{}" /> 
+                                </button> -->
+                                <span class="badge badge-warning">
+                                    Last update : 
+                                     <field name="last_update" />
+                                </span>
+                            </div>
+                        </div>
+<!-- UPDATE ALL DATAS                         -->
+                        <div attrs="{'invisible':[('name','!=','UPDATE ALL DATAS')]}">
+                            <div>
+                                <button class="btn btn-info"
+                                        style="margin-bottom:0.5em ; border-radius: 5px"
+                                        name="update_all" 
+                                        help="To update all datas"
+                                        type="object">
+                                    <span class="fa fa-solid fa-list" style="margin-right:0.5em" ></span>
+                                    Update <field name="name" modifiers="{}" />
+                                </button>
+                            </div>
+                            <div>
+                                <span class="badge badge-warning">
+                                    Last update : 
+                                     <field name="last_update" />
+                                </span>
+                            </div>
+                        </div>
+                        
+                             
+<!--                                 <button class="btn btn-warning" attrs="{'invisible':[('name','!=','UPDATE ALL DATAS')]}">
+                                    <span class="fa-solid fa-pen-to-square"/>
+                                    UPDATE ALL DATAS
+                                </button> -->
+
+                        
+
+                    </t>
+                </templates>
+            </kanban>
+                
+            </field>
+        </record>    
+        
+    </data>
+</odoo>

@@ -50,24 +50,26 @@
             <field name="arch" type="xml">
                 <form string="Quizz Form" create="false">
                     <sheet>
-                        <h1><field name="name"/></h1>
+                        <h1><field name="name" readonly='1'/></h1>
                         <group>
-                            <!-- <group>
-                                <field name="player_id" widget='selection'/>
-                            </group> -->
+                            <group>
+                                <field name="level_id" widget='selection'/>
+                                
+                            </group>
                             <group>
                                 <field name="theme_id" widget='selection'/>
                             </group>
                             <group>
-                                <field name="level_id" widget='selection'/>
+                                <field name="player_id" required='1'/>
+                                <field name="question_spinner" invisible='1' />
                             </group>
                         </group>
-                        <div>
+                        <div attrs="{'invisible':[('name','!=','Species / Padawan ')]}">
                             <p>
                                 <h6>The quizz is on the first 6 STAR WARS movies (episode 1 to 6).</h6>
                             </p>
                             <p>
-                                To become a Jedi (the next level), you must score 40 points.
+                                To become a Jedi (the next level), you must score 95 points with 37 questions.
                             </p>
                             <p>
                                 For each question, several answers are possible but there is only one correct answer.
@@ -75,9 +77,9 @@
                                 If you don't have the right answer, you score 1 point for each correct answer and you lose 1 point for each wrong
                                 answer.
                             </p>
-                            <p>
+                            <h6>
                                 Example: In which film(s) can we see at least one representative of the Wookie species?
-                            </p>
+                            </h6>
                             <p>
                                 (The correct answer is in episodes 3,4,5 and 6)
                             </p>
@@ -90,8 +92,39 @@
                             <p>
                                 To avoid scoring points too easily if my answer is 1,2,3,4,5,6 and it's not correct, I lose 5 points   
                             </p>
+                            <field name="is_quizz_started" invisible='1' />
+<!--                             <field name="is_quizz_started"/> -->
                         </div>
-                              
+                        
+<!--                          Affichage question -->
+                        
+                        <div >
+                            <div attrs="{'invisible':[('proposal_nr','&gt;',1)]}">
+                                <p>
+                                    There is <field name="proposal_nr"/> response
+                                </p>
+                            </div>
+                            <div attrs="{'invisible':[('proposal_nr','&lt;',2)]}">
+                                <p>
+                                    There are <field name="proposal_nr"/> responses
+                                </p>
+                            </div>
+                        </div>
+                        <div attrs="{'invisible':[('is_quizz_started','=',False)]}">
+                            <p>
+                                <span>Question </span>
+                                <field name="question_spinner"/>
+                                <span> of </span>
+                                <field name="question_nr" />
+                            </p>
+                            <p>
+                                <h5> <field name="question_template" /> </h5>
+                                <h4> <field name="question" /> </h4>
+                            </p>
+                            <p>
+                                <field name="response_specie_ids"/>
+                            </p>
+                        </div>
 <!--                         <div>
                             <field name="start_quizz"/>
                         </div>
@@ -105,8 +138,16 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col">
-                                        <button name="%(launch_quizz_wizard)d" type="action"
-                                            string="Start Quizz" class="oe_highlight" style="margin-right:0.5rem"/>
+                                        <button name="start_quizz"
+                                                type="object"
+                                                string="Start Quizz" class="oe_highlight" style="margin-right:0.5rem"
+                                                attrs="{'invisible':[('is_quizz_started','=', True)]}"/>
+                                        <button name="next_question"
+                                                type="object"
+                                                string="Next Question"
+                                                class="oe_highlight"
+                                                style="margin-right:0.5rem"
+                                                attrs="{'invisible':[('is_quizz_started','=', False)]}"/>
                                     </div>
                                     <div class="col-6">
                                     </div>
@@ -139,7 +180,7 @@
             </field>
         </record>    
         
-
+        
 
 
 

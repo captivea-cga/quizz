@@ -72,6 +72,7 @@
             <field name="name">Species / Padawan </field>
             <field name="theme_id" ref="theme_species"/>
             <field name="level_id" ref="level_padawan"/>
+            <field name="is_quizz_started">False</field>
         </record>
 
         <record model="swapi.quizz" id="species_jedi">
