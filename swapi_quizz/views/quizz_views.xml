@@ -60,7 +60,7 @@
                                 <field name="theme_id" widget='selection'/>
                             </group>
                             <group>
-                                <field name="player_id" required='1'/>
+                                
                                 <field name="question_spinner" invisible='1' />
                             </group>
                         </group>
@@ -97,50 +97,43 @@
                         </div>
                         
 <!--                          Affichage question -->
-                        
-                        <div >
-                            <div attrs="{'invisible':[('proposal_nr','&gt;',1)]}">
-                                <p>
-                                    There is <field name="proposal_nr"/> response
-                                </p>
-                            </div>
-                            <div attrs="{'invisible':[('proposal_nr','&lt;',2)]}">
-                                <p>
-                                    There are <field name="proposal_nr"/> responses
-                                </p>
-                            </div>
-                        </div>
+                        <field name="player_id" required='1'/>
                         <div attrs="{'invisible':[('is_quizz_started','=',False)]}">
+                            
                             <p>
                                 <span>Question </span>
-                                <field name="question_spinner"/>
+                                <field name="question_spinner" readonly='1'/>
                                 <span> of </span>
                                 <field name="question_nr" />
                             </p>
                             <p>
-                                <h5> <field name="question_template" /> </h5>
-                                <h4> <field name="question" /> </h4>
+                                <h5> <field name="question_template" readonly='1'/> </h5>
+                                <h4> <field name="question" readonly='1'/> </h4>
                             </p>
                             <p>
-                                <field name="response_specie_ids"/>
+                                <field name="response_film_ids" widget = "many2many_checkboxes"/>
                             </p>
+                            <div attrs="{'invisible':[('proposal_nr','&gt;',1)]}">
+                                <p>
+                                    There is <field name="proposal_nr" readonly='1'/> response
+                                </p>
+                            </div>
+                            <div attrs="{'invisible':[('proposal_nr','&lt;',2)]}">
+                                <p>
+                                    There are <field name="proposal_nr" readonly='1'/> responses
+                                </p>
+                            </div>
                         </div>
-<!--                         <div>
-                            <field name="start_quizz"/>
-                        </div>
-                        <div>
-                            <field name="states"/>
-                        </div>
-                        <div>
-                            <field name="proposition"/>
-                        </div> -->
+
                         <footer>
                             <div class="container">
                                 <div class="row">
                                     <div class="col">
                                         <button name="start_quizz"
                                                 type="object"
-                                                string="Start Quizz" class="oe_highlight" style="margin-right:0.5rem"
+                                                string="Start Quizz"
+                                                class="oe_highlight"
+                                                style="margin-right:0.5rem"
                                                 attrs="{'invisible':[('is_quizz_started','=', True)]}"/>
                                         <button name="next_question"
                                                 type="object"
@@ -148,14 +141,46 @@
                                                 class="oe_highlight"
                                                 style="margin-right:0.5rem"
                                                 attrs="{'invisible':[('is_quizz_started','=', False)]}"/>
+<!--                                         <button name="submit"
+                                                type="object"
+                                                string="Submit"
+                                                class="btn btn-info"
+                                                style="margin-right:0.5rem"
+                                                attrs="{'invisible':['|',('is_quizz_started','=', False),('response_film_ids','=', False)]}"/> -->
                                     </div>
                                     <div class="col-6">
                                     </div>
                                     <div class="col">
+                                        <button name="reset_quizz"
+                                                type="object"
+                                                string="Reset Quizz"
+                                                class="btn btn-warning"
+                                                style="margin-right:0.5rem"
+                                                attrs="{'invisible':[('is_quizz_started','=', False)]}"/>
                                         <button special="cancel" string="Cancel"/>
                                     </div>
                                 </div>
+                                <div class="row"
+                                     style="margin-top:0.5rem"
+                                     attrs="{'invisible':[('is_quizz_started','=', False)]}">
+                                    <div class="col">
+                                        <h5>
+                                            SCORE for last question = <field name="score_question"/> 
+                                        </h5>
+                                    </div>
+                                    <div class="col">
+                                        <h5>
+                                            SCORE Quizz = <field name="score"/> 
+                                        </h5>
+                                        <field name="test"/>
+                                        <field name="random_number"/>
+                                    </div>
+                                </div>
+                                    
+                                
                             </div>
+                            
+                            
                         </footer>
                     </sheet>
                     

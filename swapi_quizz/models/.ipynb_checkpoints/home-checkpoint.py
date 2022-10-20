@@ -222,7 +222,7 @@ class Home(models.Model):
                         planets = result['planets']
                         if len(film) > 0:
                             # this specie is already in the database, so update it
-                            film['title'] = result['title']
+                            film['name'] = result['title']
                             film['episode_id'] = result['episode_id']
                             film['opening_crawl'] = result['opening_crawl']
                             film['director'] = result['director']
@@ -257,7 +257,7 @@ class Home(models.Model):
                             # this specie is not in the database, so insert it
                             
                             new_film = self.env['swapi.film'].create({
-                                'title': result['title'],
+                                'name': result['title'],
                                 'episode_id': result['episode_id'],
                                 'opening_crawl': result['opening_crawl'],
                                 'director': result['director'],
@@ -295,7 +295,7 @@ class Home(models.Model):
                 # endif
             # endfor
 
-        self.env['swapi.film'].search([('title','=','DEMO')]).unlink()
+        self.env['swapi.film'].search([('name','=','DEMO')]).unlink()
         to_update = self.env['swapi.home'].search([('name','=','FILMS')])
         to_update['last_update'] = datetime.now()
 #         return{
@@ -762,7 +762,7 @@ class Home(models.Model):
                     # endif
                 # endfor
 
-# 3 -    
+# 3 -   FILMS 
             next_request = 'https://swapi.dev/api/films/'
             while next_request and len(next_request) > 0:
                 response = requests.get(next_request)
@@ -781,7 +781,7 @@ class Home(models.Model):
                             planets = result['planets']
                             if len(film) > 0:
                                 # this specie is already in the database, so update it
-                                film['title'] = result['title']
+                                film['name'] = result['title']
                                 film['episode_id'] = result['episode_id']
                                 film['opening_crawl'] = result['opening_crawl']
                                 film['director'] = result['director']
@@ -816,7 +816,7 @@ class Home(models.Model):
                                 # this specie is not in the database, so insert it
 
                                 new_film = self.env['swapi.film'].create({
-                                    'title': result['title'],
+                                    'name': result['title'],
                                     'episode_id': result['episode_id'],
                                     'opening_crawl': result['opening_crawl'],
                                     'director': result['director'],
