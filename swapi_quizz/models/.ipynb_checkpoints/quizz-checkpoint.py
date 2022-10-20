@@ -56,8 +56,6 @@ class Quizz(models.Model):
         random_number = random.randint(1,self.question_nr)
         self.random_number = random_number
         specie_random = self.env['swapi.specie'].search([('id',"=",random_number)])
-        self.question = specie_random.name
-        self.question_spinner +=1
 #         random_number = 1
 #         specie_random = self.env['swapi.specie'].search([('id',"=",random_number)])
         #         SCORE
@@ -113,7 +111,8 @@ class Quizz(models.Model):
 #             question au hasard
         
         
-        
+        self.question = specie_random.name
+        self.question_spinner +=1
 #         affichage du nombre de réponses si level = Padawan
         if self.level_id.id == 1 :
 #             proposals = specie_random.film_ids
@@ -121,18 +120,18 @@ class Quizz(models.Model):
             
     
         
-#     def submit(self):
-#         proposals_max = self.env['swapi.film'].search_count([])
-#         responses = self.response_film_ids
-#         responses_nr = len(responses)
-#         solutions = self.env['swapi.specie'].search([('name','=',self.question)]).film_ids
-#         solutions_nr = len(solutions)
-# #         raise UserError("solution_nr = " + str(solution_nr) + " * nb réponses = " + str(len(responses)))
-#         # 1 - Pas de réponse => score = 0
-#         if responses_nr == 0:
-#             self.score_question = 0
-#             self.test = "1 - Pas de réponse => score = 0"
-#         self.score += self.score_question    
+    def submit(self):
+        proposals_max = self.env['swapi.film'].search_count([])
+        responses = self.response_film_ids
+        responses_nr = len(responses)
+        solutions = self.env['swapi.specie'].search([('name','=',self.question)]).film_ids
+        solutions_nr = len(solutions)
+#         raise UserError("solution_nr = " + str(solution_nr) + " * nb réponses = " + str(len(responses)))
+        # 1 - Pas de réponse => score = 0
+        if responses_nr == 0:
+            self.score_question = 0
+            self.test = "1 - Pas de réponse => score = 0"
+        self.score += self.score_question    
     def reset_quizz(self):
         self.question_spinner = 0
         self.is_quizz_started = False

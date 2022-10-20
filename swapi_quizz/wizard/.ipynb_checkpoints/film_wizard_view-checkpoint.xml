@@ -1,0 +1,32 @@
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="swapi_film_wizard_form_view">
+            <field name="name">swapi.film.wizard.form</field>
+            <field name="model">swapi.film.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update films from SWAPI">
+                    <p>This button allows updating films from SWAPI.
+                            If you don't have any films in your base, you must do this update.
+                            Otherwise, this update is to be done when a new film is released.
+                    </p>
+                    <footer>
+                        <button name="update_films" type="object"
+                                string="Update Films" class="oe_highlight"/>
+                        
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="launch_film_wizard"
+                model="ir.actions.act_window">
+            <field name="name">Update film</field>
+            <field name="res_model">swapi.film.wizard</field>
+            <field name="binding_model_id" ref="swapi_quizz.model_swapi_film"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+       
+   </data>
+</odoo>
